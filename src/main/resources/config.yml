@@ -69,7 +69,7 @@ PERMISSIONS:
               "&aNo creative PvP | No villager trades | No mob spawning.",
               "&aRemoves potion effects.",
               "&aCannot interact with containers.",
-              " "
+              " ",
               "&aUsage: &b/gm [c|s]"
       } }
 
