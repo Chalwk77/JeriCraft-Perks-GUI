@@ -1,2 +1,3 @@
-# JeriCraft---Perks-GUI
-Official JeriCraft Perks GUI Plugin
+# JeriCraft Perks GUI
+
+The official JeriCraft Perks GUI Plugin.
