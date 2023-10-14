@@ -8,18 +8,18 @@ PERMISSIONS:
   # =========================== #
   # SURVIVAL PERKS:
   # =========================== #
-  - { worldguard.region.unlimited: "Remove Land Claim Restrictions",
+  - { worldguard.region.unlimited: "&b&lRemove Land Claim Restrictions",
       Price: "10",
       Lore: {
               "Allows you to exceed our 1M block claim limitation.",
               "Also grants unlimited claims."
       } }
 
-  - { coloured_name: "Coloured Name",
+  - { coloured_name: "&b&lColoured Name",
       Price: "5",
       Lore: { "Get a cool coloured name in-game." } }
 
-  - { custom_name_prefix: "Custom Name Prefix",
+  - { custom_name_prefix: "&b&lCustom Name Prefix",
       Price: "10",
       Lore: {
               "Get a cool custom name prefix of your choosing.",
@@ -28,7 +28,7 @@ PERMISSIONS:
               "Example: [ Fairy ] Chalwk"
       } }
 
-  - { custom_name_suffix: "Custom Name Suffix",
+  - { custom_name_suffix: "&b&lCustom Name Suffix",
       Price: "10",
       Lore: {
               "Get a cool custom name suffix of your choosing.",
@@ -37,21 +37,21 @@ PERMISSIONS:
               "Example: Chalwk [The Boss]"
       } }
 
-  - { magnet.use: "Magnet",
+  - { magnet.use: "&b&lMagnet",
       Price: "5",
       Lore: {
               "Item drops will magnetise toward you (range: 5 blocks).",
               "Usage: /magnet on|off"
       } }
 
-  - { nv.use: "Night Vision (command)",
+  - { nv.use: "&b&lNight Vision (command)",
       Price: "5",
       Lore: {
               "Hard on seeing? Get access to out Night Vision command.",
               "Usage: /nv"
       } }
 
-  - { cmi.colors.publicmessage.*: "Text Formatting",
+  - { cmi.colors.publicmessage.*: "&b&lText Formatting",
       Price: "3",
       Lore: {
               "Allows the use of text formatting.",
@@ -60,7 +60,7 @@ PERMISSIONS:
               "Use the /colors command in-game to see a list of formatting options."
       } }
 
-  - { cmi.command.gm.creative: "Creative Mode (command)",
+  - { cmi.command.gm.creative: "&b&lCreative Mode (command)",
       Price: "55",
       Lore: {
               "Separate inventory from Survival.",
@@ -71,34 +71,34 @@ PERMISSIONS:
               "Cannot interact with containers."
       } }
 
-  - { cmi.keepinventory: "Keep Inventory On Death (command)",
+  - { cmi.keepinventory: "&b&lKeep Inventory On Death (command)",
       Price: "10",
       Lore: { "Allows to keep your inventory after death (doesn't include XP)" } }
 
-  - { cmi.keepexp: "Keep EXP On Death (command)",
+  - { cmi.keepexp: "&b&lKeep EXP On Death (command)",
       Price: "6",
       Lore: { "Allows to keep your XP after death." } }
 
-  - { cmi.command.sethome.unlimited: "Unlimited Homes (command)",
+  - { cmi.command.sethome.unlimited: "&b&lUnlimited Homes (command)",
       Price: "7",
       Lore: { "Get access to unlimited usages of /sethome" } }
 
-  - { cmi.command.ext: "Extinguish (command)",
+  - { cmi.command.ext: "&b&lExtinguish (command)",
       Price: "3",
       Lore: { "On fire? Put yourself out with the /extinguish command." } }
 
-  - { cmi.command.clear: "Clear Inventory (command)",
+  - { cmi.command.clear: "&b&lClear Inventory (command)",
       Price: "4",
       Lore: {
               "Clear your entire inventory.",
               "Warning: Includes armor, tools, weapons, blocks, everything."
       } }
 
-  - { cmi.command.feed: "Feed (command)",
+  - { cmi.command.feed: "&b&lFeed (command)",
       Price: "6" ,
       Lore: { "Hungry? Feed yourself (full) with the /feed command." } }
 
-  - { cmi.command.fly: "Fly (command)",
+  - { cmi.command.fly: "&b&lFly (command)",
       Price: "8",
       Lore: {
               "Our most popular perk.",
@@ -106,21 +106,21 @@ PERMISSIONS:
               "Stress no longer with access to our /fly command."
       } }
 
-  - { cmi.command.god: "God mode (command)",
+  - { cmi.command.god: "&b&lGod mode (command)",
       Price: "8",
       Lore: {
               "Is the world too rough on ya?",
               "Rest easy with our /god command (you cannot PvP while in god mode)."
       } }
 
-  - { cmi.command.heal: "Heal (command)",
+  - { cmi.command.heal: "&b&lHeal (command)",
       Price: "6",
       Lore: {
               "Are you near death?",
               "Heal yourself with our /heal command (restores full health)."
       } }
 
-  - { cmi.command.ptime: "Personal Time (command)",
+  - { cmi.command.ptime: "&b&lPersonal Time (command)",
       Price: "4",
       Lore: {
               "Allows you to change the time for yourself.",
@@ -128,7 +128,7 @@ PERMISSIONS:
               "Usage: /ptime (freeze/unfreeze/day/night/dusk/morning/realtime/reset)"
       } }
 
-  - { cmi.command.pweather: "Personal Weather (command)",
+  - { cmi.command.pweather: "&b&lPersonal Weather (command)",
       Price: "4",
       Lore: {
               "Allows you to change the weather for yourself",
@@ -136,7 +136,7 @@ PERMISSIONS:
               "Usage: /pweather [ sun/rain/reset ]"
       } }
 
-  - { cmi.command.repair: "Repair hand (command)",
+  - { cmi.command.repair: "&b&lRepair hand (command)",
       Price: "7",
       Lore: {
               "Repair the item in your hand.",
@@ -145,7 +145,7 @@ PERMISSIONS:
               "or this perk will be revoked. Personal use only."
       } }
 
-  - { cmi.command.all: "Repair All (command)",
+  - { cmi.command.all: "&b&lRepair All (command)",
       Price: "9",
       Lore: {
               "Repair whole inventory.",
@@ -154,7 +154,7 @@ PERMISSIONS:
               "or this perk will be revoked. Personal use only."
       } }
 
-  - { cmi.command.flyspeed: "Fly Speed (command)",
+  - { cmi.command.flyspeed: "&b&lFly Speed (command)",
       Price: "4",
       Lore: {
               "Flying too slow? Speed up your flight!",
@@ -162,21 +162,21 @@ PERMISSIONS:
               "REQUIRES THE FLY PERK"
       } }
 
-  - { cmi.command.walkspeed: "Walk Speed (command)",
+  - { cmi.command.walkspeed: "&b&lWalk Speed (command)",
       Price: "4",
       Lore: {
               "Walking too slow? Speed up your strut!",
               "Usage: /walkspeed [ new speed ]"
       } }
 
-  - { cmi.command.top: "Surface (command)",
+  - { cmi.command.top: "&b&lSurface (command)",
       Price: "3",
       Lore: {
               "Return to the surface (Teleport to highest point at your location)",
               "Usage: /top",
       } }
 
-  - { cmi.command.setwarp: "Setwarp (command)",
+  - { cmi.command.setwarp: "&b&lSetwarp (command)",
       Price: "8",
       Lore: {
               "Get access to our set-warp system.",
@@ -184,14 +184,14 @@ PERMISSIONS:
               "Max 10 warps."
       } }
 
-  - { cmi.command.setwarp.unlimited: "Set Unlimited Warps",
+  - { cmi.command.setwarp.unlimited: "&b&lSet Unlimited Warps",
       Price: "8",
       Lore: {
               "Get access to unlimited usages of /setwarp.",
               "REQUIRES THE SET-WARP PERK"
       } }
 
-  - { cmi.command.vanish: "Vanish (command)",
+  - { cmi.command.vanish: "&b&lVanish (command)",
       Price: "10",
       Lore: {
               "Don't want to be seen?",
@@ -202,28 +202,28 @@ PERMISSIONS:
               "If you're in vanish when you log out, you will still be in vanish when you return.",
       } }
 
-  - { cmi.command.workbench: "Portable Workbench (command)",
+  - { cmi.command.workbench: "&b&lPortable Workbench (command)",
       Price: "2",
       Lore: {
               "Get access to a portable crafting table.",
               "Usage: /workbench"
       } }
 
-  - { cmi.command.loom: "Portable Loom (command)",
+  - { cmi.command.loom: "&b&lPortable Loom (command)",
       Price: "2",
       Lore: {
               "Get access to a portable loom.",
               "Usage: /loom"
       } }
 
-  - { cmi.command.me: "Me (command)",
+  - { cmi.command.me: "&b&lMe (command)",
       Price: "2",
       Lore: {
               "Sends special message to all players",
               "Usage: /me [ text ]"
       } }
 
-  - { cmi.command.merchant: "Merchant (command)",
+  - { cmi.command.merchant: "&b&lMerchant (command)",
       Price: "5",
       Lore: {
               "Get access to our custom Merchant GUI.",
@@ -231,7 +231,7 @@ PERMISSIONS:
               "Usage: /merchant [ level ]"
       } }
 
-  - { cmi.scrollpainting: "Painting Scroll",
+  - { cmi.scrollpainting: "&b&lPainting Scroll",
       Price: "5",
       Lore: {
               "Scroll through paintings easily with this perk.",
@@ -240,7 +240,7 @@ PERMISSIONS:
               "scroll with your mouse wheel to change it."
       } }
 
-  - { cmi.command.sc: "Sign Copy (command)",
+  - { cmi.command.sc: "&b&lSign Copy (command)",
       Price: "4",
       Lore: {
               "Starts sign copy process.",
@@ -250,7 +250,7 @@ PERMISSIONS:
               "or punch any non-sign block to cancel process."
       } }
 
-  - { cmi.command.scavenge: "Scavenge (command)",
+  - { cmi.command.scavenge: "&b&lScavenge (command)",
       Price: "9",
       Lore: {
               "Allows to break items into raw ingredients and extract enchantments with particular chance.",
@@ -261,55 +261,55 @@ PERMISSIONS:
   # =========================== #
   # MCMMO (increase the chances of successful passive abilities):
   # =========================== #
-  - { mcmmo.perks.lucky.acrobatics: "MCMMO Lucky acrobatics",
+  - { mcmmo.perks.lucky.acrobatics: "&b&lMCMMO Lucky acrobatics",
       Price: "4",
       Lore: { "Increases the chances of successful passive abilities" } }
 
-  - { mcmmo.perks.lucky.archery: "MCMMO Lucky archery",
+  - { mcmmo.perks.lucky.archery: "&b&lMCMMO Lucky archery",
       Price: "4",
       Lore: { "Increases the chances of successful passive abilities" } }
 
-  - { mcmmo.perks.lucky.axes: "MCMMO Lucky axes",
+  - { mcmmo.perks.lucky.axes: "&b&lMCMMO Lucky axes",
       Price: "4",
       Lore: { "Increases the chances of successful passive abilities" } }
 
-  - { mcmmo.perks.lucky.excavation: "MCMMO Lucky excavation",
+  - { mcmmo.perks.lucky.excavation: "&b&lMCMMO Lucky excavation",
       Price: "4",
       Lore: { "Increases the chances of successful passive abilities" } }
 
-  - { mcmmo.perks.lucky.fishing: "MCMMO Lucky fishing",
+  - { mcmmo.perks.lucky.fishing: "&b&lMCMMO Lucky fishing",
       Price: "4",
       Lore: { "Increases the chances of successful passive abilities" } }
 
-  - { mcmmo.perks.lucky.herbalism: "MCMMO Lucky herbalism",
+  - { mcmmo.perks.lucky.herbalism: "&b&lMCMMO Lucky herbalism",
       Price: "4",
       Lore: { "Increases the chances of successful passive abilities" } }
 
-  - { mcmmo.perks.lucky.mining: "MCMMO Lucky mining",
+  - { mcmmo.perks.lucky.mining: "&b&lMCMMO Lucky mining",
       Price: "4",
       Lore: { "Increases the chances of successful passive abilities" } }
 
-  - { mcmmo.perks.lucky.repair: "MCMMO Lucky repair",
+  - { mcmmo.perks.lucky.repair: "&b&lMCMMO Lucky repair",
       Price: "4",
       Lore: { "Increases the chances of successful passive abilities" } }
 
-  - { mcmmo.perks.lucky.smelting: "MCMMO Lucky smelting",
+  - { mcmmo.perks.lucky.smelting: "&b&lMCMMO Lucky smelting",
       Price: "4",
       Lore: { "Increases the chances of successful passive abilities" } }
 
-  - { mcmmo.perks.lucky.swords: "MCMMO Lucky swords",
+  - { mcmmo.perks.lucky.swords: "&b&lMCMMO Lucky swords",
       Price: "4",
       Lore: { "Increases the chances of successful passive abilities" } }
 
-  - { mcmmo.perks.lucky.taming: "MCMMO Lucky taming",
+  - { mcmmo.perks.lucky.taming: "&b&lMCMMO Lucky taming",
       Price: "4",
       Lore: { "Increases the chances of successful passive abilities" } }
 
-  - { mcmmo.perks.lucky.unarmed: "MCMMO Lucky unarmed",
+  - { mcmmo.perks.lucky.unarmed: "&b&lMCMMO Lucky unarmed",
       Price: "4",
       Lore: { "Increases the chances of successful passive abilities" } }
 
-  - { mcmmo.perks.lucky.woodcutting: "MCMMO Lucky woodcutting",
+  - { mcmmo.perks.lucky.woodcutting: "&b&lMCMMO Lucky woodcutting",
       Price: "4",
       Lore: { "Increases the chances of successful passive abilities" } }
 
@@ -317,15 +317,15 @@ PERMISSIONS:
   # =========================== #
   # MCMMO (Money/Experience Boosters):
   # =========================== #
-  - { mcmmo.perks.xp.double.all: "MCMMO Double XP (all skills)",
+  - { mcmmo.perks.xp.double.all: "&b&lMCMMO Double XP (all skills)",
       Price: "7",
       Lore: { "Money/Experience Booster" } }
 
-  - { mcmmo.perks.xp.triple.all: "MCMMO Triple XP (all skills)",
+  - { mcmmo.perks.xp.triple.all: "&b&lMCMMO Triple XP (all skills)",
       Price: "7",
       Lore: { "Money/Experience Booster" } }
 
-  - { mcmmo.perks.xp.quadruple.all: "MCMMO Quadruple XP (all skills)",
+  - { mcmmo.perks.xp.quadruple.all: "&b&lMCMMO Quadruple XP (all skills)",
       Price: "7",
       Lore: { "Money/Experience Booster" } }
 
@@ -333,14 +333,14 @@ PERMISSIONS:
   # =========================== #
   # MCMMO (Reduce ability cooldown time):
   # =========================== #
-  - { mcmmo.perks.cooldowns.halved.10: "MCMMO Cooldown Reduction (quarter)",
+  - { mcmmo.perks.cooldowns.halved.10: "&b&lMCMMO Cooldown Reduction (quarter)",
       Price: "4",
       Lore: { "Reduces ability cooldowns" } }
-  - { mcmmo.perks.cooldowns.quartered.10: "MCMMO Cooldown Reduction (half)",
+  - { mcmmo.perks.cooldowns.quartered.10: "&b&lMCMMO Cooldown Reduction (half)",
       Price: "5",
       Lore: { "Reduces ability cooldowns" } }
 
-  - { mcmmo.perks.cooldowns.thirded.10: "MCMMO Cooldown Reduction (third)",
+  - { mcmmo.perks.cooldowns.thirded.10: "&b&lMCMMO Cooldown Reduction (third)",
       Price: "6",
       Lore: { "Reduces ability cooldowns" } }
 
@@ -348,35 +348,35 @@ PERMISSIONS:
   # =========================== #
   # HEALTH BOOSTERS:
   # =========================== #
-  - { health_booster_max_hp_15: "Health Booster (30%)",
+  - { health_booster_max_hp_15: "&b&lHealth Booster (30%)",
       Price: "3",
       Lore: { "Get a permanent upgrade to your max HP!" } }
 
-  - { health_booster_max_hp_20: "Health Booster (40%)",
+  - { health_booster_max_hp_20: "&b&lHealth Booster (40%)",
       Price: "4",
       Lore: { "Get a permanent upgrade to your max HP!" } }
 
-  - { health_booster_max_hp_25: "Health Booster (50%)",
+  - { health_booster_max_hp_25: "&b&lHealth Booster (50%)",
       Price: "5",
       Lore: { "Get a permanent upgrade to your max HP!" } }
 
-  - { health_booster_max_hp_30: "Health Booster (60%)",
+  - { health_booster_max_hp_30: "&b&lHealth Booster (60%)",
       Price: "6",
       Lore: { "Get a permanent upgrade to your max HP!" } }
 
-  - { health_booster_max_hp_35: "Health Booster (70%)",
+  - { health_booster_max_hp_35: "&b&lHealth Booster (70%)",
       Price: "7",
       Lore: { "Get a permanent upgrade to your max HP!" } }
 
-  - { health_booster_max_hp_40: "Health Booster (80%)",
+  - { health_booster_max_hp_40: "&b&lHealth Booster (80%)",
       Price: "8",
       Lore: { "Get a permanent upgrade to your max HP!" } }
 
-  - { health_booster_max_hp_45: "Health Booster (90%)",
+  - { health_booster_max_hp_45: "&b&lHealth Booster (90%)",
       Price: "9",
       Lore: { "Get a permanent upgrade to your max HP!" } }
 
-  - { health_booster_max_hp_50: "Health Booster (100%)",
+  - { health_booster_max_hp_50: "&b&lHealth Booster (100%)",
       Price: "10",
       Lore: { "Get a permanent upgrade to your max HP!" } }
 
@@ -384,67 +384,67 @@ PERMISSIONS:
   # =========================== #
   # JOBS:
   # =========================== #
-  - { jobs.max.5: "5 Max Jobs",
+  - { jobs.max.5: "&b&l5 Max Jobs",
       Price: "4",
       Lore: { "Get 5 max jobs!" } }
 
-  - { jobs.max.6: "6 Max Jobs",
+  - { jobs.max.6: "&b&l6 Max Jobs",
       Price: "5",
       Lore: { "Get 6 max jobs!" } }
 
-  - { jobs.max.7: "7 Max Jobs",
+  - { jobs.max.7: "&b&l7 Max Jobs",
       Price: "6",
       Lore: { "Get 7 max jobs!" } }
 
-  - { jobs.max.8: "8 Max Jobs",
+  - { jobs.max.8: "&b&l8 Max Jobs",
       Price: "7",
       Lore: { "Get 8 max jobs!" } }
 
-  - { jobs.boost.all.exp.2: "XP Boost (all jobs)",
+  - { jobs.boost.all.exp.2: "&b&lXP Boost (all jobs)",
       Price: "15",
       Lore: { "2x XP Boost" } }
 
-  - { jobs.boost.all.money.2: "Money Boost (all jobs)",
+  - { jobs.boost.all.money.2: "&b&lMoney Boost (all jobs)",
       Price: "15",
       Lore: { "2x XP Boost" } }
 
-  - { jobs.boost.woodcutter.all.2: "Exp & Money boost (woodcutter)",
+  - { jobs.boost.woodcutter.all.2: "&b&lExp & Money boost (woodcutter)",
       Price: "3",
       Lore: { "2x XP Boost" } }
 
-  - { jobs.boost.miner.all.2: "Exp & Money boost (miner)",
+  - { jobs.boost.miner.all.2: "&b&lExp & Money boost (miner)",
       Price: "3",
       Lore: { "2x XP Boost" } }
 
-  - { jobs.boost.builder.all.2: "Exp & Money boost (builder)",
+  - { jobs.boost.builder.all.2: "&b&lExp & Money boost (builder)",
       Price: "3",
       Lore: { "2x XP Boost" } }
 
-  - { jobs.boost.digger.all.2: "Exp & Money boost (digger)",
+  - { jobs.boost.digger.all.2: "&b&lExp & Money boost (digger)",
       Price: "3",
       Lore: { "2x XP Boost" } }
 
-  - { jobs.boost.farmer.all.2: "Exp & Money boost (farmer)",
+  - { jobs.boost.farmer.all.2: "&b&lExp & Money boost (farmer)",
       Price: "3",
       Lore: { "2x XP Boost" } }
 
-  - { jobs.boost.hunter.all.2: "Exp & Money boost (hunter)",
+  - { jobs.boost.hunter.all.2: "&b&lExp & Money boost (hunter)",
       Price: "3",
       Lore: { "2x XP Boost" } }
 
-  - { jobs.boost.fisherman.all.2: "Exp & Money boost (fisherman)",
+  - { jobs.boost.fisherman.all.2: "&b&lExp & Money boost (fisherman)",
       Price: "3",
       Lore: { "2x XP Boost" } }
 
-  - { jobs.boost.weaponsmith.all.2: "Exp & Money boost (weaponsmith)",
+  - { jobs.boost.weaponsmith.all.2: "&b&lExp & Money boost (weaponsmith)",
       Price: "3",
       Lore: { "2x XP Boost" } }
 
-  - { jobs.boost.brewer.all.2: "Exp & Money boost (brewer)",
+  - { jobs.boost.brewer.all.2: "&b&lExp & Money boost (brewer)",
       Price: "3",
       Lore: { "2x XP Boost" } }
 
-  - { jobs.boost.enchanter.all.2: "Exp & Money boost (enchanter)",
+  - { jobs.boost.enchanter.all.2: "&b&lExp & Money boost (enchanter)",
       Price: "3",
       Lore: { "2x XP Boost" } }
 
@@ -452,7 +452,7 @@ PERMISSIONS:
   # =========================== #
   # KITS:
   # =========================== #
-  - { cmi.kit.sf_ingots: "Slimefun Ingots Kit",
+  - { cmi.kit.sf_ingots: "&b&lSlimefun Ingots Kit",
       Price: "7",
       Lore: {
               "Includes 16 of each Slimefun ingot.",
@@ -460,7 +460,7 @@ PERMISSIONS:
               "Access: Once every 24 hours."
       } }
 
-  - { cmi.kit.sf_dust: "Slimefun Dust Kit",
+  - { cmi.kit.sf_dust: "&b&lSlimefun Dust Kit",
       Price: "7",
       Lore: {
               "Includes 16 of each Slimefun dust.",
@@ -468,7 +468,7 @@ PERMISSIONS:
               "Access: Once every 24 hours."
       } }
 
-  - { cmi.kit.glass: "Glass Kit",
+  - { cmi.kit.glass: "&b&lGlass Kit",
       Price: "4",
       Lore: {
               "Kit includes 16 of each glass (pane/stained).",
@@ -476,7 +476,7 @@ PERMISSIONS:
               "Access: Once every 24 hours."
       } }
 
-  - { cmi.kit.terracotta: "Terracotta Kit",
+  - { cmi.kit.terracotta: "&b&lTerracotta Kit",
       Price: "4",
       Lore: {
               "Includes 16 of each terracotta block.",
@@ -484,7 +484,7 @@ PERMISSIONS:
               "Access: Once every 24 hours."
       } }
 
-  - { cmi.kit.banner: "Banner Kit",
+  - { cmi.kit.banner: "&b&lBanner Kit",
       Price: "3",
       Lore: {
               "Includes 16 of each banner an complementary loom.",
@@ -492,7 +492,7 @@ PERMISSIONS:
               "Access: Once every 24 hours."
       } }
 
-  - { cmi.kit.wool: "Wool Kit",
+  - { cmi.kit.wool: "&b&lWool Kit",
       Price: "5",
       Lore: {
               "Includes 16 of each wool and complementary shears with Efficiency V.",
@@ -500,7 +500,7 @@ PERMISSIONS:
               "Access: Once every 24 hours."
       } }
 
-  - { cmi.kit.pyro: "Pyro Kit",
+  - { cmi.kit.pyro: "&b&lPyro Kit",
       Price: "4",
       Lore: {
               "Includes:",
