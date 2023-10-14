@@ -45,7 +45,7 @@ PERMISSIONS:
       Price: "5",
       Lore: {
               "&aItem drops will magnetise toward you (range: 5 blocks).",
-              "&aUsage: &b/magnet [on|off]"
+              "&aUsage: &b/magnet [on/off]"
       } }
 
   - { nv.use: "&b&lNight Vision (command)",
@@ -70,11 +70,11 @@ PERMISSIONS:
               "&aSeparate inventory from Survival.",
               "&aUnable to drop/pickup items.",
               "&aMust not build for other players (personal use only).",
-              "&aNo creative PvP | No villager trades | No mob spawning.",
+              "&aNo creative PvP / No villager trades / No mob spawning.",
               "&aRemoves potion effects.",
               "&aCannot interact with containers.",
               " ",
-              "&aUsage: &b/gm [c|s]"
+              "&aUsage: &b/gm [c/s]"
       } }
 
   - { cmi.keepinventory: "&b&lKeep Inventory On Death",
@@ -99,7 +99,7 @@ PERMISSIONS:
               "&aClear your entire inventory.",
               "&aWarning: Includes armor, tools, weapons, blocks, everything.",
               " ",
-              "Usage: &b/clear|ci"
+              "Usage: &b/clear/ci"
       } }
 
   - { cmi.command.feed: "&b&lFeed (command)",
@@ -133,7 +133,7 @@ PERMISSIONS:
       Lore: {
               "&aAllows you to change the time for yourself.",
               "&aOther players still see normal time!",
-              "&aUsage: &b/ptime [freeze|unfreeze|day|night|dusk|morning|realtime|reset]"
+              "&aUsage: &b/ptime [freeze/unfreeze/day/night/dusk/morning/realtime/reset]"
       } }
 
   - { cmi.command.pweather: "&b&lPersonal Weather (command)",
@@ -141,7 +141,7 @@ PERMISSIONS:
       Lore: {
               "&aAllows you to change the weather for yourself",
               "&aOther players still see normal weather!",
-              "&aUsage: &b/pweather [ sun|rain|reset ]"
+              "&aUsage: &b/pweather [ sun/rain/reset ]"
       } }
 
   - { cmi.command.repair: "&b&lRepair hand (command)",

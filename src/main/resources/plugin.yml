@@ -7,5 +7,4 @@ description: Shows a player a list of perks they have purchased.
 commands:
   perks:
     description: Shows a player a list of perks they have purchased.
-    usage: /<command>
-    aliases: [ purchases ]
+    usage: "/<command> [show/reload]"
