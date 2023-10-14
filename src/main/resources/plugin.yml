@@ -1,6 +1,6 @@
-name: JeriCraftPerks
+name: JeriCraftPerkGUI
 version: '${project.version}'
-main: com.chalwk.jericraftperks.Main
+main: com.chalwk.perkgui.Main
 api-version: '1.20'
 authors: [ Chalwk ]
 description: Shows a player a list of perks they have purchased.

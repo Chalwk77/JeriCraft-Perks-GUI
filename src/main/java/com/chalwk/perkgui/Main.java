@@ -1,10 +1,10 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
 
-package com.chalwk.jericraftperks;
+package com.chalwk.perkgui;
 
-import com.chalwk.jericraftperks.commands.CommandManager;
-import com.chalwk.jericraftperks.listener.GUIListener;
-import com.chalwk.jericraftperks.listener.JoinListener;
+import com.chalwk.perkgui.commands.CommandManager;
+import com.chalwk.perkgui.listener.GUIListener;
+import com.chalwk.perkgui.listener.JoinListener;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;

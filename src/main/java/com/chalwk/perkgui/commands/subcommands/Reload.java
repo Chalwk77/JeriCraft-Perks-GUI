@@ -1,8 +1,8 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
-package com.chalwk.jericraftperks.commands.subcommands;
+package com.chalwk.perkgui.commands.subcommands;
 
-import com.chalwk.jericraftperks.Main;
-import com.chalwk.jericraftperks.commands.SubCommand;
+import com.chalwk.perkgui.Main;
+import com.chalwk.perkgui.commands.SubCommand;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 

@@ -1,10 +1,10 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
-package com.chalwk.jericraftperks.commands.subcommands;
+package com.chalwk.perkgui.commands.subcommands;
 
-import com.chalwk.jericraftperks.Main;
-import com.chalwk.jericraftperks.commands.SubCommand;
-import com.chalwk.jericraftperks.gui.CustomGUI;
-import com.chalwk.jericraftperks.gui.GUIButton;
+import com.chalwk.perkgui.Main;
+import com.chalwk.perkgui.commands.SubCommand;
+import com.chalwk.perkgui.gui.CustomGUI;
+import com.chalwk.perkgui.gui.GUIButton;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;

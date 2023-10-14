@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.chalwk</groupId>
-    <artifactId>JeriCraftPerks</artifactId>
+    <artifactId>JeriCraftPerkGUI</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>JeriCraftPerks</name>
+    <name>JeriCraftPerkGUI</name>
 
     <description>Shows a player a list of perks they have purchased.</description>
     <properties>

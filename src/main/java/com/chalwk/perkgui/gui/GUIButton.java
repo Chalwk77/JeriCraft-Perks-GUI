@@ -1,5 +1,5 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
-package com.chalwk.jericraftperks.gui;
+package com.chalwk.perkgui.gui;
 
 import org.bukkit.inventory.ItemStack;
 

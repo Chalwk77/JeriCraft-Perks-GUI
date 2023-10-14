@@ -1,8 +1,8 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
-package com.chalwk.jericraftperks.commands;
+package com.chalwk.perkgui.commands;
 
-import com.chalwk.jericraftperks.commands.subcommands.Reload;
-import com.chalwk.jericraftperks.commands.subcommands.ShowPerks;
+import com.chalwk.perkgui.commands.subcommands.Reload;
+import com.chalwk.perkgui.commands.subcommands.ShowPerks;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
-import static com.chalwk.jericraftperks.Main.send;
+import static com.chalwk.perkgui.Main.send;
 
 public class CommandManager implements CommandExecutor {
 

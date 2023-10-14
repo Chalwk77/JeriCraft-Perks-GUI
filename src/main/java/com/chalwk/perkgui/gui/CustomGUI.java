@@ -1,8 +1,8 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
-package com.chalwk.jericraftperks.gui;
+package com.chalwk.perkgui.gui;
 
-import com.chalwk.jericraftperks.Main;
-import com.chalwk.jericraftperks.data.PlayerDataManager;
+import com.chalwk.perkgui.Main;
+import com.chalwk.perkgui.data.PlayerDataManager;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;

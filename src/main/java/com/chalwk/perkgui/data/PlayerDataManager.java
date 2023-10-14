@@ -1,5 +1,5 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
-package com.chalwk.jericraftperks.data;
+package com.chalwk.perkgui.data;
 
 import org.bukkit.entity.Player;
 
