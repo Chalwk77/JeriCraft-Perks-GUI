@@ -38,10 +38,8 @@ public class CommandManager implements CommandExecutor, TabCompleter {
                         return true;
                     }
                 }
-                send(player, "&cInvalid Syntax. Usage: &b/perks show/reload");
-            } else {
-                send(player, "&cInvalid Syntax. Usage: &b/perks show/reload");
             }
+            send(player, "&cInvalid Syntax. Usage: &b/perks show/reload");
         }
         return true;
     }
