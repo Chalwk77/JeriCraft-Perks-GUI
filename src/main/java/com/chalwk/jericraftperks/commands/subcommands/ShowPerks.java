@@ -98,10 +98,10 @@ public class ShowPerks extends SubCommand {
     private ItemStack newPerkButton(String perk, String price) {
         ItemStack item = new ItemStack(Material.BOOK);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(ChatColor.GREEN + perk);
+        meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', perk));
 
         List<String> lore = new ArrayList<>();
-        lore.add(ChatColor.GREEN + "$" + price);
+        lore.add(ChatColor.translateAlternateColorCodes('&', "$" + price));
         meta.setLore(lore);
 
         meta.addEnchant(Enchantment.DURABILITY, 1, true);
