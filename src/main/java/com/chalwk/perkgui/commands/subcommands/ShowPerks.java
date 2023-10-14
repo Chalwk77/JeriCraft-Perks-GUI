@@ -55,7 +55,6 @@ public class ShowPerks extends SubCommand {
             if (slot > 52) { // coming in a future update: multiple pages
                 break;
             }
-
             List<String> perk = new ArrayList<>((Collection<? extends String>) opt.keySet());
             String permissionNode = perk.get(0);
             if (sender.hasPermission(permissionNode)) {
@@ -116,6 +115,7 @@ public class ShowPerks extends SubCommand {
         List<String> data = new ArrayList<>((Collection<? extends String>) opt.values());
         String perk = data.get(0);
         String price = data.get(1);
+
         ItemStack item = newPerkButton(perk, price);
         GUIButton perkButton = new GUIButton(item);
         perkButton.setAction(sender::closeInventory);
