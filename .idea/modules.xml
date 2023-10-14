@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JeriCraftPerks.iml" filepath="$PROJECT_DIR$/JeriCraftPerks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JeriCraftPerkGUI.iml" filepath="$PROJECT_DIR$/JeriCraftPerkGUI.iml" />
     </modules>
   </component>
 </project>

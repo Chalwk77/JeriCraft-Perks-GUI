@@ -47,16 +47,7 @@ public class ShowPerks extends SubCommand {
     public void perform(Player sender, String[] args) {
 
         CustomGUI GUI = new CustomGUI(formatMSG(config.getString("GUI_TITLE")), 6);
-
-        // CLOSE BUTTON:
-        ItemStack close = new ItemStack(Material.BARRIER);
-        ItemMeta closeMeta = close.getItemMeta();
-        closeMeta.setDisplayName(formatMSG(config.getString("GUI_CLOSE_BUTTON")));
-        close.setItemMeta(closeMeta);
-
-        GUIButton closeButton = new GUIButton(close);
-        GUI.setItem(closeButton, 53);
-        closeButton.setAction(sender::closeInventory);
+        showNavigationButtons(sender, GUI);
 
         // PERK BUTTONS:
         int slot = 0;
@@ -78,6 +69,45 @@ public class ShowPerks extends SubCommand {
         } else {
             sender.sendMessage(formatMSG(config.getString("NO_PERKS")));
         }
+    }
+
+    private void showNavigationButtons(Player sender, CustomGUI GUI) {
+
+        // LORE:
+        List<String> lore = new ArrayList<>();
+        lore.add(formatMSG("&cMultiple pages coming soon!"));
+
+        // Previous page:
+        ItemStack previous = new ItemStack(Material.RED_STAINED_GLASS_PANE);
+        ItemMeta previousMeta = previous.getItemMeta();
+        previousMeta.setDisplayName(formatMSG(config.getString("GUI_PREVIOUS_PAGE")));
+        previousMeta.setLore(lore);
+        previous.setItemMeta(previousMeta);
+
+        GUIButton previousButton = new GUIButton(previous);
+        GUI.setItem(previousButton, 45);
+        previousButton.setAction(sender::closeInventory); // TEMP
+
+        // CLOSE BUTTON:
+        ItemStack close = new ItemStack(Material.BARRIER);
+        ItemMeta closeMeta = close.getItemMeta();
+        closeMeta.setDisplayName(formatMSG(config.getString("GUI_CLOSE_BUTTON")));
+        close.setItemMeta(closeMeta);
+
+        GUIButton closeButton = new GUIButton(close);
+        GUI.setItem(closeButton, 49);
+        closeButton.setAction(sender::closeInventory);
+
+        // Next page:
+        ItemStack next = new ItemStack(Material.GREEN_STAINED_GLASS_PANE);
+        ItemMeta nextMeta = next.getItemMeta();
+        nextMeta.setDisplayName(formatMSG(config.getString("GUI_NEXT_PAGE")));
+        nextMeta.setLore(lore);
+        next.setItemMeta(nextMeta);
+
+        GUIButton nextButton = new GUIButton(next);
+        GUI.setItem(nextButton, 53);
+        nextButton.setAction(sender::closeInventory); // TEMP
     }
 
     @NotNull

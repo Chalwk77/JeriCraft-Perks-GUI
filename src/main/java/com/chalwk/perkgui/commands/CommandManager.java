@@ -1,8 +1,6 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
 package com.chalwk.perkgui.commands;
 
-import com.chalwk.perkgui.commands.subcommands.Reload;
-import com.chalwk.perkgui.commands.subcommands.ShowPerks;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -10,19 +8,33 @@ import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.reflections.Reflections;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 
 import static com.chalwk.perkgui.Main.send;
+import static org.reflections.Reflections.log;
 
 public class CommandManager implements CommandExecutor, TabCompleter {
 
     private final ArrayList<SubCommand> subcommands = new ArrayList<>();
 
     public CommandManager() {
-        subcommands.add(new ShowPerks());
-        subcommands.add(new Reload());
+        //subcommands.add(new ShowPerks());
+        //subcommands.add(new Reload());
+
+        Reflections reflections = new Reflections("com.chalwk.perkgui.commands.subcommands");
+        for (Class<?> commandClass : reflections.getSubTypesOf(SubCommand.class)) {
+            try {
+                subcommands.add((SubCommand) commandClass.getDeclaredConstructor().newInstance());
+            } catch (InstantiationException | IllegalAccessException | InvocationTargetException |
+                     NoSuchMethodException e) {
+                log.warn("Failed to load command: " + commandClass.getName(), e, Level.WARNING);
+            }
+        }
     }
 
     @Override
