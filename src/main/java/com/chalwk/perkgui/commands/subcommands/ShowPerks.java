@@ -46,12 +46,12 @@ public class ShowPerks extends SubCommand {
     @Override
     public void perform(Player sender, String[] args) {
 
-        CustomGUI GUI = new CustomGUI(ChatColor.BLUE + "YOUR PERKS:", 6);
+        CustomGUI GUI = new CustomGUI(formatMSG(config.getString("GUI_TITLE")), 6);
 
         // CLOSE BUTTON:
         ItemStack close = new ItemStack(Material.BARRIER);
         ItemMeta closeMeta = close.getItemMeta();
-        closeMeta.setDisplayName(ChatColor.RED + "Close!");
+        closeMeta.setDisplayName(formatMSG(config.getString("GUI_CLOSE_BUTTON")));
         close.setItemMeta(closeMeta);
 
         GUIButton closeButton = new GUIButton(close);
@@ -61,32 +61,31 @@ public class ShowPerks extends SubCommand {
         // PERK BUTTONS:
         int slot = 0;
         for (Map<?, ?> opt : config.getMapList("PERMISSIONS")) {
-            if (slot > 52) {
+            if (slot > 52) { // coming in a future update: multiple pages
                 break;
             }
+
             List<String> perk = new ArrayList<>((Collection<? extends String>) opt.keySet());
-            for (String node : perk) {
-                if (sender.hasPermission(node)) {
-                    GUIButton perkButton = getGuiButton(sender, opt);
-                    GUI.setItem(perkButton, slot);
-                    slot++;
-                }
+            String permissionNode = perk.get(0);
+            if (sender.hasPermission(permissionNode)) {
+                GUIButton perkButton = getGuiButton(sender, opt);
+                GUI.setItem(perkButton, slot);
+                slot++;
             }
         }
         if (slot > 0) {
             GUI.show(sender);
         } else {
-            sender.sendMessage(ChatColor.RED + "You have no perks!");
+            sender.sendMessage(formatMSG(config.getString("NO_PERKS")));
         }
     }
 
     @NotNull
     private GUIButton getGuiButton(Player sender, Map<?, ?> opt) {
 
-        List<String> perks = new ArrayList<>((Collection<? extends String>) opt.values());
-        String perk = perks.get(0);
-        String price = perks.get(1);
-
+        List<String> data = new ArrayList<>((Collection<? extends String>) opt.values());
+        String perk = data.get(0);
+        String price = data.get(1);
         ItemStack item = newPerkButton(perk, price);
         GUIButton perkButton = new GUIButton(item);
         perkButton.setAction(sender::closeInventory);
@@ -98,10 +97,10 @@ public class ShowPerks extends SubCommand {
     private ItemStack newPerkButton(String perk, String price) {
         ItemStack item = new ItemStack(Material.BOOK);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', perk));
+        meta.setDisplayName(formatMSG(perk));
 
         List<String> lore = new ArrayList<>();
-        lore.add(ChatColor.translateAlternateColorCodes('&', "$" + price));
+        lore.add(formatMSG("$" + price));
         meta.setLore(lore);
 
         meta.addEnchant(Enchantment.DURABILITY, 1, true);
@@ -109,5 +108,9 @@ public class ShowPerks extends SubCommand {
 
         item.setItemMeta(meta);
         return item;
+    }
+
+    private String formatMSG(String string) {
+        return ChatColor.translateAlternateColorCodes('&', string);
     }
 }

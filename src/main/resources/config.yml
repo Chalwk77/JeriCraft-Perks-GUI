@@ -3,6 +3,10 @@
 # Copyright, 2023, Jericho Crosby <jericho.crosby227@gmail.com>
 ###############################################################
 
+GUI_TITLE: "&b&lYOUR PERKS:"
+GUI_CLOSE_BUTTON: "&cClose!"
+NO_PERKS: "&cYou don't have any perks!"
+
 PERMISSIONS:
 
   # =========================== #
