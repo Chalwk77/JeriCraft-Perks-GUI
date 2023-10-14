@@ -15,49 +15,74 @@ PERMISSIONS:
   # SURVIVAL PERKS:
   # =========================== #
 
-  - worldguard.region.unlimited: "&b&lRemove Land Claim Restrictions"
-    Price: "10"
-    Lore:
+  - worldguard.region.unlimited:
+    name: "&b&lRemove Land Claim Restrictions"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$8"
+      - " "
       - "&aAllows you to exceed our 1M block claim limitation."
       - "&aAlso grants unlimited claims."
-  - coloured_name: "&b&lColoured Name"
+  - coloured_name:
+    name: "&b&lColoured Name"
     Price: "5"
-    Lore:
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$5"
+      - " "
       - "&aGet a cool coloured name in-game."
-  - custom_name_prefix: "&b&lCustom Name Prefix"
-    Price: "10"
-    Lore:
+  - custom_name_prefix:
+    name: "&b&lCustom Name Prefix"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$10"
+      - " "
       - "&aGet a cool custom name prefix of your choosing."
       - "&aIncludes custom colour codes!"
       - " "
       - "&aExample: &b[ Fairy ] Chalwk"
-  - custom_name_suffix: "&b&lCustom Name Suffix"
-    Price: "10"
-    Lore:
+  - custom_name_suffix:
+    name: "&b&lCustom Name Suffix"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$10"
+      - " "
       - "&aGet a cool custom name suffix of your choosing."
       - "&aIncludes custom colour codes!"
       - " "
       - "&aExample: &bChalwk [The Boss]"
-  - magnet.use: "&b&lMagnet"
-    Price: "5"
-    Lore:
+  - magnet.use:
+    name: "&b&lMagnet"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$5"
+      - " "
       - "&aItem drops will magnetise toward you (range: 5 blocks)."
       - "&aUsage: &b/magnet [on/off]"
-  - nv.use: "&b&lNight Vision (command)"
-    Price: "5"
-    Lore:
+  - nv.use:
+    name: "&b&lNight Vision (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$5"
+      - " "
       - "&aHard on seeing? Get access to out Night Vision command."
       - "&aUsage: &b/nv"
-  - cmi.colors.publicmessage.*: "&b&lText Formatting"
-    Price: "3"
-    Lore:
+  - cmi.colors.publicmessage.*:
+    name: "&b&lText Formatting"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$3"
+      - " "
       - "&aAllows the use of text formatting."
       - "&aUse text formatting everywhere:"
       - "&a - Chat, books, signs, nametags, anywhere you can type text."
       - "&aUse the &b/colors &acommand in-game to see a list of formatting options."
-  - cmi.command.gm.creative: "&b&lCreative Mode (command)"
-    Price: "55"
-    Lore:
+  - cmi.command.gm.creative:
+    name: "&b&lCreative Mode (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$55"
+      - " "
       - "&aSeparate inventory from Survival."
       - "&aUnable to drop/pickup items."
       - "&aMust not build for other players (personal use only)."
@@ -66,142 +91,217 @@ PERMISSIONS:
       - "&aCannot interact with containers."
       - " "
       - "&aUsage: &b/gm [c/s]"
-  - cmi.keepinventory: "&b&lKeep Inventory On Death"
-    Price: "10"
-    Lore:
+  - cmi.keepinventory:
+    name: "&b&lKeep Inventory On Death"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$10"
+      - " "
       - "&aAllows to keep your inventory after death (doesn't include XP)"
-  - cmi.keepexp: "&b&lKeep EXP On Death"
-    Price: "6"
-    Lore:
+  - cmi.keepexp:
+    name: "&b&lKeep EXP On Death"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$6"
+      - " "
       - "&aAllows to keep your XP after death."
-  - cmi.command.sethome.unlimited: "&b&lUnlimited Homes (command)"
-    Price: "7"
-    Lore:
+  - cmi.command.sethome.unlimited:
+    name: "&b&lUnlimited Homes (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$7"
+      - " "
       - "&aGet access to unlimited usages of &b/sethome"
-  - cmi.command.ext: "&b&lExtinguish (command)"
-    Price: "3"
-    Lore:
+  - cmi.command.ext:
+    name: "&b&lExtinguish (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$3"
+      - " "
       - "&aOn fire? Put yourself out with the &b/extinguish &acommand."
-  - cmi.command.clear: "&b&lClear Inventory (command)"
-    Price: "4"
-    Lore:
+  - cmi.command.clear:
+    name: "&b&lClear Inventory (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aClear your entire inventory."
       - "&aWarning: Includes armor, tools, weapons, blocks, everything."
       - " "
       - "Usage: &b/clear/ci"
-  - cmi.command.feed: "&b&lFeed (command)"
-    Price: "6"
-    Lore:
+  - cmi.command.feed:
+    name: "&b&lFeed (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$6"
+      - " "
       - "&aHungry? Feed yourself (full) with &b/feed"
-  - cmi.command.fly: "&b&lFly (command)"
-    Price: "8"
-    Lore:
+  - cmi.command.fly:
+    name: "&b&lFly (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$8"
+      - " "
       - "&aOur most popular perk."
       - "&aSick of walking around?"
       - "&aStress no longer with access to our &b/fly &acommand."
-  - cmi.command.god: "&b&lGod mode (command)"
-    Price: "8"
-    Lore:
+  - cmi.command.god:
+    name: "&b&lGod Mode (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$8"
+      - " "
       - "&aIs the world too rough on ya?"
       - "&aRest easy with our &b/god &acommand (you cannot PvP while in god mode)."
-  - cmi.command.heal: "&b&lHeal (command)"
-    Price: "6"
-    Lore:
+  - cmi.command.heal:
+    name: "&b&lHeal (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$6"
+      - " "
       - "&aAre you near death?"
       - "&aHeal yourself with our &b/heal &acommand (restores full health)."
-  - cmi.command.ptime: "&b&lPersonal Time (command)"
-    Price: "4"
-    Lore:
+  - cmi.command.ptime:
+    name: "&b&lPersonal Time (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aAllows you to change the time for yourself."
       - "&aOther players still see normal time!"
       - "&aUsage: &b/ptime [freeze/unfreeze/day/night/dusk/morning/realtime/reset]"
-  - cmi.command.pweather: "&b&lPersonal Weather (command)"
-    Price: "4"
-    Lore:
+  - cmi.command.pweather:
+    name: "&b&lPersonal Weather (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aAllows you to change the weather for yourself"
       - "&aOther players still see normal weather!"
       - "&aUsage: &b/pweather [ sun/rain/reset ]"
-  - cmi.command.repair: "&b&lRepair hand (command)"
-    Price: "7"
-    Lore:
+  - cmi.command.repair:
+    name: "&b&lRepair hand (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$7"
+      - " "
       - "&aRepair the item in your hand."
       - "&aUsage: &b/repair hand"
       - "&aRestriction: You must not repair items for other players"
       - "&aor this perk will be revoked. Personal use only."
-  - cmi.command.all: "&b&lRepair All (command)"
-    Price: "9"
-    Lore:
+  - cmi.command.all:
+    name: "&b&lRepair All (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$9"
+      - " "
       - "&aRepair whole inventory."
       - "&aUsage: &b/repair [all]"
       - "&aRestriction: You must not repair items for other players"
       - "&aor this perk will be revoked. Personal use only."
-  - cmi.command.flyspeed: "&b&lFly Speed (command)"
-    Price: "4"
-    Lore:
+  - cmi.command.flyspeed:
+    name: "&b&lFly Speed (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aFlying too slow? Speed up your flight!"
       - "&aUsage: &b/flyspeed [ new speed ]"
       - "&aREQUIRES THE FLY PERK"
-  - cmi.command.walkspeed: "&b&lWalk Speed (command)"
-    Price: "4"
-    Lore:
+  - cmi.command.walkspeed:
+    name: "&b&lWalk Speed (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aWalking too slow? Speed up your strut!"
       - "&aUsage: &b/walkspeed [ new speed ]"
-  - cmi.command.top: "&b&lSurface (command)"
-    Price: "3"
-    Lore:
+  - cmi.command.top:
+    name: "&b&lSurface (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$3"
+      - " "
       - "&aReturn to the surface (Teleport to highest point at your location)"
       - "&aUsage: &b/top"
-  - cmi.command.setwarp: "&b&lSetwarp (command)"
-    Price: "8"
-    Lore:
+  - cmi.command.setwarp:
+    name: "&b&lSet Warp (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$8"
+      - " "
       - "&aGet access to our set-warp system."
       - "&aUsage: &b/setwarp [ warp name ]"
       - "&aMax 10 warps."
-  - cmi.command.setwarp.unlimited: "&b&lSet Unlimited Warps"
-    Price: "8"
-    Lore:
+  - cmi.command.setwarp.unlimited:
+    name: "&b&lSet Unlimited Warps (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$8"
+      - " "
       - "&aGet access to unlimited usages of &b/setwarp&a."
       - "&aREQUIRES THE SET-WARP PERK"
-  - cmi.command.vanish: "&b&lVanish (command)"
-    Price: "10"
-    Lore:
+  - cmi.command.vanish:
+    name: "&b&lVanish (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$10"
+      - " "
       - "&aDon't want to be seen?"
       - "&aHide from other players with our vanish system."
       - "&aUsage: &b/vanish"
       - "&aDoes not hide you from staff members."
       - "&aYou will be hidden on the tab list, and no quit/join message will appear."
       - "&aIf you're in vanish when you log out, you will still be in vanish when you return."
-  - cmi.command.workbench: "&b&lPortable Workbench (command)"
-    Price: "2"
-    Lore:
+  - cmi.command.workbench:
+    name: "&b&lPortable Workbench (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$2"
+      - " "
       - "&aGet access to a portable crafting table."
       - "&aUsage: &b/workbench"
-  - cmi.command.loom: "&b&lPortable Loom (command)"
-    Price: "2"
-    Lore:
+  - cmi.command.loom:
+    name: "&b&lPortable Loom (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$2"
+      - " "
       - "&aGet access to a portable loom."
       - "&aUsage: &b/loom"
-  - cmi.command.me: "&b&lMe (command)"
-    Price: "2"
-    Lore:
+  - cmi.command.me:
+    name: "&b&lMe (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$2"
+      - " "
       - "&aSends special message to all players"
       - "&aUsage: &b/me [ text ]"
-  - cmi.command.merchant: "&b&lMerchant (command)"
-    Price: "5"
-    Lore:
+  - cmi.command.merchant:
+    name: "&b&lMerchant (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$5"
+      - " "
       - "&aGet access to our custom Merchant GUI."
       - "&aMimics merchant trader GUIs at top levels."
       - "&aUsage: &b/merchant [ level ]"
-  - cmi.scrollpainting: "&b&lPainting Scroll"
-    Price: "5"
-    Lore:
+  - cmi.scrollpainting:
+    name: "&b&lPainting Scroll"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$5"
+      - " "
       - "&aScroll through paintings easily with this perk."
       - " "
       - "&aUsage: Shift-right-click a painting then"
       - "&ascroll with your mouse wheel to change it."
-  - cmi.command.sc: "&b&lSign Copy (command)"
-    Price: "4"
-    Lore:
+  - cmi.command.sc:
+    name: "&b&lSign Copy (command)"
+    lore:
+      - "&7Type: &aSurvival Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aStarts sign copy process."
       - "&aUsage: Look at a sign and then type &b/sc&a."
       - "&aThis will copy the text (and text formatting if present)."
@@ -212,237 +312,387 @@ PERMISSIONS:
   # MCMMO (increase the chances of successful passive abilities):
   # ============================================================ #
 
-  - mcmmo.perks.lucky.acrobatics: "&b&lMCMMO Lucky acrobatics"
-    Price: "4"
-    Lore:
+  - mcmmo.perks.lucky.acrobatics:
+    name: "&b&lMCMMO Lucky acrobatics"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aIncreases the chances of successful passive abilities"
-  - mcmmo.perks.lucky.archery: "&b&lMCMMO Lucky archery"
-    Price: "4"
-    Lore:
+  - mcmmo.perks.lucky.archery:
+    name: "&b&lMCMMO Lucky archery"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aIncreases the chances of successful passive abilities"
-  - mcmmo.perks.lucky.axes: "&b&lMCMMO Lucky axes"
-    Price: "4"
-    Lore:
+  - mcmmo.perks.lucky.axes:
+    name: "&b&lMCMMO Lucky axes"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aIncreases the chances of successful passive abilities"
-  - mcmmo.perks.lucky.excavation: "&b&lMCMMO Lucky excavation"
-    Price: "4"
-    Lore:
+  - mcmmo.perks.lucky.excavation:
+    name: "&b&lMCMMO Lucky excavation"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aIncreases the chances of successful passive abilities"
-  - mcmmo.perks.lucky.fishing: "&b&lMCMMO Lucky fishing"
-    Price: "4"
-    Lore:
+  - mcmmo.perks.lucky.fishing:
+    name: "&b&lMCMMO Lucky fishing"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aIncreases the chances of successful passive abilities"
-  - mcmmo.perks.lucky.herbalism: "&b&lMCMMO Lucky herbalism"
-    Price: "4"
-    Lore:
+  - mcmmo.perks.lucky.herbalism:
+    name: "&b&lMCMMO Lucky herbalism"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aIncreases the chances of successful passive abilities"
-  - mcmmo.perks.lucky.mining: "&b&lMCMMO Lucky mining"
-    Price: "4"
-    Lore:
+  - mcmmo.perks.lucky.mining:
+    name: "&b&lMCMMO Lucky mining"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aIncreases the chances of successful passive abilities"
-  - mcmmo.perks.lucky.repair: "&b&lMCMMO Lucky repair"
-    Price: "4"
-    Lore:
+  - mcmmo.perks.lucky.repair:
+    name: "&b&lMCMMO Lucky repair"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aIncreases the chances of successful passive abilities"
-  - mcmmo.perks.lucky.smelting: "&b&lMCMMO Lucky smelting"
-    Price: "4"
-    Lore:
+  - mcmmo.perks.lucky.smelting:
+    name: "&b&lMCMMO Lucky smelting"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aIncreases the chances of successful passive abilities"
-  - mcmmo.perks.lucky.swords: "&b&lMCMMO Lucky swords"
-    Price: "4"
-    Lore:
+  - mcmmo.perks.lucky.swords:
+    name: "&b&lMCMMO Lucky swords"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aIncreases the chances of successful passive abilities"
-  - mcmmo.perks.lucky.taming: "&b&lMCMMO Lucky taming"
-    Price: "4"
-    Lore:
+  - mcmmo.perks.lucky.taming:
+    name: "&b&lMCMMO Lucky taming"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aIncreases the chances of successful passive abilities"
-  - mcmmo.perks.lucky.unarmed: "&b&lMCMMO Lucky unarmed"
-    Price: "4"
-    Lore:
+  - mcmmo.perks.lucky.unarmed:
+    name: "&b&lMCMMO Lucky unarmed"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aIncreases the chances of successful passive abilities"
-  - mcmmo.perks.lucky.woodcutting: "&b&lMCMMO Lucky woodcutting"
-    Price: "4"
-    Lore:
+  - mcmmo.perks.lucky.woodcutting:
+    name: "&b&lMCMMO Lucky woodcutting"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aIncreases the chances of successful passive abilities"
-  - mcmmo.perks.xp.double.all: "&b&lMCMMO Double XP (all skills)"
-    Price: "7"
-    Lore:
+  - mcmmo.perks.xp.double.all:
+    name: "&b&lMCMMO Double XP (all skills)"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aMoney/Experience Booster"
-  - mcmmo.perks.xp.triple.all: "&b&lMCMMO Triple XP (all skills)"
-    Price: "7"
-    Lore:
+  - mcmmo.perks.xp.triple.all:
+    name: "&b&lMCMMO Triple XP (all skills)"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aMoney/Experience Booster"
-  - mcmmo.perks.xp.quadruple.all: "&b&lMCMMO Quadruple XP (all skills)"
-    Price: "7"
-    Lore:
+  - mcmmo.perks.xp.quadruple.all:
+    name: "&b&lMCMMO Quadruple XP (all skills)"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aMoney/Experience Booster"
 
   # ==================================== #
   # MCMMO (Reduce ability cooldown time):
   # ==================================== #
 
-  - mcmmo.perks.cooldowns.halved.10: "&b&lMCMMO Cooldown Reduction (quarter)"
-    Price: "4"
-    Lore:
+  - mcmmo.perks.cooldowns.halved.10:
+    name: "&b&lMCMMO Cooldown Reduction (quarter)"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aReduces ability cooldowns"
-  - mcmmo.perks.cooldowns.quartered.10: "&b&lMCMMO Cooldown Reduction (half)"
-    Price: "5"
-    Lore:
+  - mcmmo.perks.cooldowns.quartered.10:
+    name: "&b&lMCMMO Cooldown Reduction (half)"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$5"
+      - " "
       - "&aReduces ability cooldowns"
-  - mcmmo.perks.cooldowns.thirded.10: "&b&lMCMMO Cooldown Reduction (third)"
-    Price: "6"
-    Lore:
+  - mcmmo.perks.cooldowns.thirded.10:
+    name: "&b&lMCMMO Cooldown Reduction (third)"
+    lore:
+      - "&7Type: &aMCMMO Perk"
+      - "&7Price: &a$6"
+      - " "
       - "&aReduces ability cooldowns"
 
   # =========================== #
   # HEALTH BOOSTERS:
   # =========================== #
 
-  - health_booster_max_hp_15: "&b&lHealth Booster (30%)"
-    Price: "3"
-    Lore:
+  - health_booster_max_hp_15:
+    name: "&b&lHealth Booster (30%)"
+    lore:
+      - "&7Type: &aHealth Boosters"
+      - "&7Price: &a$3"
+      - " "
       - "&aGet a permanent upgrade to your max HP!"
-  - health_booster_max_hp_20: "&b&lHealth Booster (40%)"
-    Price: "4"
-    Lore:
+  - health_booster_max_hp_20:
+    name: "&b&lHealth Booster (40%)"
+    lore:
+      - "&7Type: &aHealth Boosters"
+      - "&7Price: &a$4"
+      - " "
       - "&aGet a permanent upgrade to your max HP!"
-  - health_booster_max_hp_25: "&b&lHealth Booster (50%)"
-    Price: "5"
-    Lore:
+  - health_booster_max_hp_25:
+    name: "&b&lHealth Booster (50%)"
+    lore:
+      - "&7Type: &aHealth Boosters"
+      - "&7Price: &a5"
+      - " "
       - "&aGet a permanent upgrade to your max HP!"
-  - health_booster_max_hp_30: "&b&lHealth Booster (60%)"
-    Price: "6"
-    Lore:
+  - health_booster_max_hp_30:
+    name: "&b&lHealth Booster (60%)"
+    lore:
+      - "&7Type: &aHealth Boosters"
+      - "&7Price: &a$6"
+      - " "
       - "&aGet a permanent upgrade to your max HP!"
-  - health_booster_max_hp_35: "&b&lHealth Booster (70%)"
-    Price: "7"
-    Lore:
+  - health_booster_max_hp_35:
+    name: "&b&lHealth Booster (70%)"
+    lore:
+      - "&7Type: &aHealth Boosters"
+      - "&7Price: &a$7"
+      - " "
       - "&aGet a permanent upgrade to your max HP!"
-  - health_booster_max_hp_40: "&b&lHealth Booster (80%)"
-    Price: "8"
-    Lore:
+  - health_booster_max_hp_40:
+    name: "&b&lHealth Booster (80%)"
+    lore:
+      - "&7Type: &aHealth Boosters"
+      - "&7Price: &a$8"
+      - " "
       - "&aGet a permanent upgrade to your max HP!"
-  - health_booster_max_hp_45: "&b&lHealth Booster (90%)"
-    Price: "9"
-    Lore:
+  - health_booster_max_hp_45:
+    name: "&b&lHealth Booster (90%)"
+    lore:
+      - "&7Type: &aHealth Boosters"
+      - "&7Price: &a$9"
+      - " "
       - "&aGet a permanent upgrade to your max HP!"
   - health_booster_max_hp_50: "&b&lHealth Booster (100%)"
-    Price: "10"
-    Lore:
+    name: "&b&lHealth Booster (100%)"
+    lore:
+      - "&7Type: &aHealth Boosters"
+      - "&7Price: &a$10"
+      - " "
       - "&aGet a permanent upgrade to your max HP!"
 
   # =========================== #
   # JOBS:
   # =========================== #
 
-  - jobs.max.5: "&b&l5 Max Jobs"
-    Price: "4"
-    Lore:
+  - jobs.max.5:
+    name: "&b&l5 Max Jobs"
+    lore:
+      - "&7Type: &aJobs Perk"
+      - "&7Price: &a$4"
+      - " "
       - "&aGet 5 max jobs!"
-  - jobs.max.6: "&b&l6 Max Jobs"
-    Price: "5"
-    Lore:
+  - jobs.max.6:
+    name: "&b&l6 Max Jobs"
+    lore:
+      - "&7Type: &aJobs Perk"
+      - "&7Price: &a$5"
+      - " "
       - "&aGet 6 max jobs!"
-  - jobs.max.7: "&b&l7 Max Jobs"
-    Price: "6"
-    Lore:
+  - jobs.max.7:
+    name: "&b&l7 Max Jobs"
+    lore:
+      - "&7Type: &aJobs Perk"
+      - "&7Price: &a$6"
+      - " "
       - "&aGet 7 max jobs!"
-  - jobs.max.8: "&b&l8 Max Jobs"
-    Price: "7"
-    Lore:
+  - jobs.max.8:
+    name: "&b&l8 Max Jobs"
+    lore:
+      - "&7Type: &aJobs Perk"
+      - "&7Price: &a$7"
+      - " "
       - "&aGet 8 max jobs!"
-  - jobs.boost.all.exp.2: "&b&lXP Boost (all jobs)"
-    Price: "15"
-    Lore:
+  - jobs.boost.all.exp.2:
+    name: "&b&lXP Boost (all jobs)"
+    lore:
+      - "&7Type: &aJobs Perk"
+      - "&7Price: &a$15"
+      - " "
       - "&a2x XP Boost"
-  - jobs.boost.all.money.2: "&b&lMoney Boost (all jobs)"
-    Price: "15"
-    Lore:
+  - jobs.boost.all.money.2:
+    name: "&b&lMoney Boost (all jobs)"
+    lore:
+      - "&7Type: &aJobs Perk"
+      - "&7Price: &a$15"
+      - " "
       - "&a2x XP Boost"
-  - jobs.boost.woodcutter.all.2: "&b&lExp & Money boost (woodcutter)"
-    Price: "3"
-    Lore:
+  - jobs.boost.woodcutter.all.2:
+    name: "&b&lExp & Money boost (woodcutter)"
+    lore:
+      - "&7Type: &aJobs Perk"
+      - "&7Price: &a$3"
+      - " "
       - "&a2x XP Boost"
-  - jobs.boost.miner.all.2: "&b&lExp & Money boost (miner)"
-    Price: "3"
-    Lore:
+  - jobs.boost.miner.all.2:
+    name: "&b&lExp & Money boost (miner)"
+    lore:
+      - "&7Type: &aJobs Perk"
+      - "&7Price: &a$3"
+      - " "
       - "&a2x XP Boost"
-  - jobs.boost.builder.all.2: "&b&lExp & Money boost (builder)"
-    Price: "3"
-    Lore:
+  - jobs.boost.builder.all.2:
+    name: "&b&lExp & Money boost (builder)"
+    lore:
+      - "&7Type: &aJobs Perk"
+      - "&7Price: &a$3"
+      - " "
       - "&a2x XP Boost"
-  - jobs.boost.digger.all.2: "&b&lExp & Money boost (digger)"
-    Price: "3"
-    Lore:
+  - jobs.boost.digger.all.2:
+    name: "&b&lExp & Money boost (digger)"
+    lore:
+      - "&7Type: &aJobs Perk"
+      - "&7Price: &a$3"
+      - " "
       - "&a2x XP Boost"
-  - jobs.boost.farmer.all.2: "&b&lExp & Money boost (farmer)"
-    Price: "3"
-    Lore:
+  - jobs.boost.farmer.all.2:
+    name: "&b&lExp & Money boost (farmer)"
+    lore:
+      - "&7Type: &aJobs Perk"
+      - "&7Price: &a$3"
+      - " "
       - "&a2x XP Boost"
-  - jobs.boost.hunter.all.2: "&b&lExp & Money boost (hunter)"
-    Price: "3"
-    Lore:
+  - jobs.boost.hunter.all.2:
+    name: "&b&lExp & Money boost (hunter)"
+    lore:
+      - "&7Type: &aJobs Perk"
+      - "&7Price: &a$3"
+      - " "
       - "&a2x XP Boost"
-  - jobs.boost.fisherman.all.2: "&b&lExp & Money boost (fisherman)"
-    Price: "3"
-    Lore:
+  - jobs.boost.fisherman.all.2:
+    name: "&b&lExp & Money boost (fisherman)"
+    lore:
+      - "&7Type: &aJobs Perk"
+      - "&7Price: &a$3"
+      - " "
       - "&a2x XP Boost"
-  - jobs.boost.weaponsmith.all.2: "&b&lExp & Money boost (weaponsmith)"
-    Price: "3"
-    Lore:
+  - jobs.boost.weaponsmith.all.2:
+    name: "&b&lExp & Money boost (weaponsmith)"
+    lore:
+      - "&7Type: &aJobs Perk"
+      - "&7Price: &a$3"
+      - " "
       - "&a2x XP Boost"
-  - jobs.boost.brewer.all.2: "&b&lExp & Money boost (brewer)"
-    Price: "3"
-    Lore:
+  - jobs.boost.brewer.all.2:
+    name: "&b&lExp & Money boost (brewer)"
+    lore:
+      - "&7Type: &aJobs Perk"
+      - "&7Price: &a$3"
+      - " "
       - "&a2x XP Boost"
-  - jobs.boost.enchanter.all.2: "&b&lExp & Money boost (enchanter)"
-    Price: "3"
-    Lore:
+  - jobs.boost.enchanter.all.2:
+    name: "&b&lExp & Money boost (enchanter)"
+    lore:
+      - "&7Type: &aJobs Perk"
+      - "&7Price: &a$3"
+      - " "
       - "&a2x XP Boost"
 
   # =========================== #
   # KITS:
   # =========================== #
 
-  - cmi.kit.sf_ingots: "&b&lSlimefun Ingots Kit"
-    Price: "7"
-    Lore:
+  - cmi.kit.sf_ingots:
+    name: "&b&lSlimefun Ingots Kit"
+    lore:
+      - "&7Type: &aKits"
+      - "&7Price: &a$7"
+      - " "
       - "&aIncludes 16 of each Slimefun ingot."
       - "&aUsage: &b/kit sf_ingots"
       - "&aAccess: Once every 24 hours."
-  - cmi.kit.sf_dust: "&b&lSlimefun Dust Kit"
-    Price: "7"
-    Lore:
+  - cmi.kit.sf_dust:
+    name: "&b&lSlimefun Dust Kit"
+    lore:
+      - "&7Type: &aKits"
+      - "&7Price: &a$7"
+      - " "
       - "&aIncludes 16 of each Slimefun dust."
       - "&aUsage: &b/kit sf_dust"
       - "&aAccess: Once every 24 hours."
-  - cmi.kit.glass: "&b&lGlass Kit"
-    Price: "4"
-    Lore:
+  - cmi.kit.glass:
+    name: "&b&lGlass Kit"
+    lore:
+      - "&7Type: &aKits"
+      - "&7Price: &a$4"
+      - " "
       - "&aKit includes 16 of each glass (pane/stained)."
       - "&aUsage:  &b/kit glass"
       - "&aAccess: Once every 24 hours."
-  - cmi.kit.terracotta: "&b&lTerracotta Kit"
-    Price: "4"
-    Lore:
+  - cmi.kit.terracotta:
+    name: "&b&lTerracotta Kit"
+    lore:
+      - "&7Type: &aKits"
+      - "&7Price: &a$4"
+      - " "
       - "&aIncludes 16 of each terracotta block."
       - "&aUsage:  &b/kit terracotta"
       - "&aAccess: Once every 24 hours."
-  - cmi.kit.banner: "&b&lBanner Kit"
-    Price: "3"
-    Lore:
+  - cmi.kit.banner:
+    name: "&b&lBanner Kit"
+    lore:
+      - "&7Type: &aKits"
+      - "&7Price: &a$3"
+      - " "
       - "&aIncludes 16 of each banner an complementary loom."
       - "&aUsage:  &b/kit banner"
       - "&aAccess: Once every 24 hours."
-  - cmi.kit.wool: "&b&lWool Kit"
-    Price: "5"
-    Lore:
+  - cmi.kit.wool:
+    name: "&b&lWool Kit"
+    lore:
+      - "&7Type: &aKits"
+      - "&7Price: &a$5"
+      - " "
       - "&aIncludes 16 of each wool and complementary shears with Efficiency V."
       - "&aUsage: &b/kit wool"
       - "&aAccess: Once every 24 hours."
-  - cmi.kit.pyro: "&b&lPyro Kit"
-    Price: "4"
-    Lore:
+  - cmi.kit.pyro:
+    name: "&b&lPyro Kit"
+    lore:
+      - "&7Type: &aKits"
+      - "&7Price: &a$4"
+      - " "
       - "&aIncludes:"
       - "&aDiamond Bow (flame enchant) with 16 arrows."
       - "&aGolden Sword (Fire Aspect II, Sharpness I, Unbreaking III)"

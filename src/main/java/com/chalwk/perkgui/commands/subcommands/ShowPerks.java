@@ -49,7 +49,6 @@ public class ShowPerks extends SubCommand {
         CustomGUI GUI = new CustomGUI(formatMSG(config.getString("GUI_TITLE")), 6);
         showNavigationButtons(sender, GUI);
 
-        // PERK BUTTONS:
         int slot = 0;
         for (Map<?, ?> opt : config.getMapList("PERMISSIONS")) {
             if (slot > 52) { // coming in a future update: multiple pages
@@ -58,7 +57,10 @@ public class ShowPerks extends SubCommand {
             List<String> perk = new ArrayList<>((Collection<? extends String>) opt.keySet());
             String permissionNode = perk.get(0);
             if (sender.hasPermission(permissionNode)) {
-                GUIButton perkButton = getGuiButton(sender, opt);
+                Map<?, ?> data = (Map<?, ?>) opt.get(permissionNode);
+                String name = (String) data.get("name");
+                List<String> lore = (List<String>) data.get("lore");
+                GUIButton perkButton = getGuiButton(sender, name, lore);
                 GUI.setItem(perkButton, slot);
                 slot++;
             }
@@ -110,13 +112,9 @@ public class ShowPerks extends SubCommand {
     }
 
     @NotNull
-    private GUIButton getGuiButton(Player sender, Map<?, ?> opt) {
+    private GUIButton getGuiButton(Player sender, String name, List<String> lore) {
 
-        List<String> data = new ArrayList<>((Collection<? extends String>) opt.values());
-        String perk = data.get(0);
-        String price = data.get(1);
-
-        ItemStack item = newPerkButton(perk, price);
+        ItemStack item = newPerkButton(name, lore);
         GUIButton perkButton = new GUIButton(item);
         perkButton.setAction(sender::closeInventory);
 
@@ -124,13 +122,13 @@ public class ShowPerks extends SubCommand {
     }
 
     @NotNull
-    private ItemStack newPerkButton(String perk, String price) {
+    private ItemStack newPerkButton(String name, List<String> lore) {
+
         ItemStack item = new ItemStack(Material.BOOK);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(formatMSG(perk));
+        meta.setDisplayName(formatMSG(name));
 
-        List<String> lore = new ArrayList<>();
-        lore.add(formatMSG("$" + price));
+        lore.replaceAll(this::formatMSG);
         meta.setLore(lore);
 
         meta.addEnchant(Enchantment.DURABILITY, 1, true);
