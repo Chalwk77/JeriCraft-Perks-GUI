@@ -21,7 +21,7 @@ import java.util.Map;
 
 public class ShowPerks extends SubCommand {
 
-    private final FileConfiguration config = Main.getInstance().getConfig();
+    private final FileConfiguration config = Main.getPluginConfig();
 
     @Override
     public String getName() {

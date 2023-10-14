@@ -260,14 +260,6 @@ PERMISSIONS:
               "&aor punch any non-sign block to cancel process."
       } }
 
-  - { cmi.command.scavenge: "&b&lScavenge (command)",
-      Price: "9",
-      Lore: {
-              "&aAllows to break items into raw ingredients and",
-              "extract enchantments with particular chance.",
-              "&aUsage: &b/scavenge"
-      } }
-
 
   # =========================== #
   # MCMMO (increase the chances of successful passive abilities):
