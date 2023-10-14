@@ -1,0 +1,438 @@
+###############################################################
+# JeriCraft Perks Plugin configuration file
+# Copyright, 2023, Jericho Crosby <jericho.crosby227@gmail.com>
+###############################################################
+
+PERMISSIONS:
+
+  # =========================== #
+  # SURVIVAL PERKS:
+  # =========================== #
+  - { worldguard.region.unlimited: "Remove Land Claim Restrictions",
+      Price: "10",
+      Lore: {
+              "Allows you to exceed our 1M block claim limitation.",
+              "Also grants unlimited claims."
+      } }
+
+  - { coloured_name: "Coloured Name",
+      Price: "5",
+      Lore: { "Get a cool coloured name in-game."
+      } }
+
+  - { custom_name_prefix: "Custom Name Prefix",
+      Price: "10",
+      Lore: {
+              "Get a cool custom name prefix of your choosing.",
+              "Includes custom colour codes!",
+              " ",
+              "Example: [ Fairy ] Chalwk"
+      } }
+
+  - { custom_name_suffix: "Custom Name Suffix",
+      Price: "10",
+      Lore: {
+              "Get a cool custom name suffix of your choosing.",
+              "Includes custom colour codes!",
+              " ",
+              "Example: Chalwk [The Boss]"
+      } }
+
+  - { magnet.use: "Magnet",
+      Price: "5",
+      Lore: {
+              "Item drops will magnetise toward you (range: 5 blocks).",
+              "Usage: /magnet on|off"
+      } }
+
+  - { nv.use: "Night Vision (command)",
+      Price: "5",
+      Lore: {
+              "Hard on seeing? Get access to out Night Vision command.",
+              "Usage: /nv"
+      } }
+
+  - { cmi.colors.publicmessage.*: "Text Formatting",
+      Price: "3",
+      Lore: { "" } }
+
+  - { cmi.command.gm.creative: "Creative Mode (command)",
+      Price: "55",
+      Lore: {
+              "Separate inventory from Survival.",
+              "Unable to drop/pickup items.",
+              "Must not build for other players (personal use only).",
+              "No creative PvP | No villager trades | No mob spawning.",
+              "Removes potion effects.",
+              "Cannot interact with containers."
+      } }
+
+  - { cmi.keepinventory: "Keep Inventory On Death (command)",
+      Price: "10",
+      Lore: { "Allows to keep your inventory after death (doesn't include XP)"
+      } }
+
+  - { cmi.keepexp: "Keep EXP On Death (command)",
+      Price: "6",
+      Lore: { "Allows to keep your XP after death." } }
+
+  - { cmi.command.sethome.unlimited: "Unlimited Homes (command)",
+      Price: "7",
+      Lore: { "Get access to unlimited usages of /sethome"
+      } }
+
+  - { cmi.command.ext: "Extinguish (command)",
+      Price: "3",
+      Lore: { "On fire? Put yourself out with the /extinguish command."
+      } }
+
+  - { cmi.command.clear: "Clear Inventory (command)",
+      Price: "4",
+      Lore: { "Clear your entire inventory.",
+              "Warning: Includes armor, tools, weapons, blocks, everything."
+      } }
+
+  - { cmi.command.feed: "Feed (command)",
+      Price: "6" ,
+      Lore: { "Hungry? Feed yourself (full) with the /feed command."
+      } }
+
+  - { cmi.command.fly: "Fly (command)",
+      Price: "8",
+      Lore: { "Our most popular perk.",
+              "Sick of walking around?",
+              "Stress no longer with access to our /fly command."
+      } }
+
+  - { cmi.command.god: "God mode (command)",
+      Price: "8",
+      Lore: { "Is the world too rough on ya?",
+              "Rest easy with our /god command (you cannot PvP while in god mode)."
+      } }
+
+  - { cmi.command.heal: "Heal (command)",
+      Price: "6",
+      Lore: { "Are you near death?",
+              "Heal yourself with our /heal command (restores full health)."
+      } }
+
+  - { cmi.command.ptime: "Personal Time (command)",
+      Price: "4",
+      Lore: {
+              "Allows you to change the time for yourself.",
+              "Other players still see normal time!",
+              "Usage: /ptime (freeze/unfreeze/day/night/dusk/morning/realtime/reset)"
+      } }
+
+  - { cmi.command.pweather: "Personal Weather (command)",
+      Price: "4",
+      Lore: {
+              "Allows you to change the weather for yourself",
+              "Other players still see normal weather!",
+              "Usage: /pweather [ sun/rain/reset ]"
+      } }
+
+  - { cmi.command.repair: "Repair hand (command)",
+      Price: "7",
+      Lore: {
+              "Repair the item in your hand.",
+              "Usage: /repair hand",
+              "Restriction: You must not repair items for other players",
+              "or this perk will be revoked. Personal use only."
+      } }
+
+  - { cmi.command.all: "Repair All (command)",
+      Price: "9",
+      Lore: {
+              "Repair whole inventory.",
+              "Usage: /repair all",
+              "Restriction: You must not repair items for other players",
+              "or this perk will be revoked. Personal use only."
+      } }
+
+  - { cmi.command.flyspeed: "Fly Speed (command)",
+      Price: "4",
+      Lore: {
+              "Flying too slow? Speed up your flight!",
+              "Usage: /flyspeed [ new speed ]",
+              "REQUIRES THE FLY PERK"
+      } }
+
+  - { cmi.command.walkspeed: "Walk Speed (command)",
+      Price: "4",
+      Lore: {
+              "Walking too slow? Speed up your strut!",
+              "Usage: /walkspeed [ new speed ]"
+      } }
+
+  - { cmi.command.top: "Surface (command)",
+      Price: "3",
+      Lore: {
+              "Return to the surface (Teleport to highest point at your location)",
+              "Usage: /top",
+      } }
+
+  - { cmi.command.setwarp: "Setwarp (command)",
+      Price: "8",
+      Lore: { "" } }
+
+  - { cmi.command.setwarp.unlimited: "Set Unlimited Warps",
+      Price: "8",
+      Lore: { "" } }
+
+  - { cmi.command.vanish: "Vanish (command)",
+      Price: "10",
+      Lore: { "" } }
+
+  - { cmi.command.workbench: "Portable Workbench (command)",
+      Price: "2",
+      Lore: { "" } }
+
+  - { cmi.command.loom: "Portable Loom (command)",
+      Price: "2",
+      Lore: { "" } }
+
+  - { cmi.command.me: "Me (command)",
+      Price: "2",
+      Lore: { "" } }
+
+  - { cmi.command.merchant: "Merchant (command)",
+      Price: "5",
+      Lore: { "" } }
+
+  - { cmi.scrollpainting: "Painting Scroll",
+      Price: "5",
+      Lore: { "" } }
+
+  - { cmi.command.sc: "Sign Copy (command)",
+      Price: "4",
+      Lore: { "" } }
+
+  - { cmi.command.scavenge: "Scavenge (command)",
+      Price: "9",
+      Lore: { "" } }
+
+
+  # =========================== #
+  # MCMMO (increase the chances of successful passive abilities):
+  # =========================== #
+  - { mcmmo.perks.lucky.acrobatics: "MCMMO Lucky acrobatics",
+      Price: "4",
+      Lore: { "" } }
+
+  - { mcmmo.perks.lucky.archery: "MCMMO Lucky archery",
+      Price: "4",
+      Lore: { "" } }
+
+  - { mcmmo.perks.lucky.axes: "MCMMO Lucky axes",
+      Price: "4",
+      Lore: { "" } }
+
+  - { mcmmo.perks.lucky.excavation: "MCMMO Lucky excavation",
+      Price: "4",
+      Lore: { "" } }
+
+  - { mcmmo.perks.lucky.fishing: "MCMMO Lucky fishing",
+      Price: "4",
+      Lore: { "" } }
+
+  - { mcmmo.perks.lucky.herbalism: "MCMMO Lucky herbalism",
+      Price: "4",
+      Lore: { "" } }
+
+  - { mcmmo.perks.lucky.mining: "MCMMO Lucky mining",
+      Price: "4",
+      Lore: { "" } }
+
+  - { mcmmo.perks.lucky.repair: "MCMMO Lucky repair",
+      Price: "4",
+      Lore: { "" } }
+
+  - { mcmmo.perks.lucky.smelting: "MCMMO Lucky smelting",
+      Price: "4",
+      Lore: { "" } }
+
+  - { mcmmo.perks.lucky.swords: "MCMMO Lucky swords",
+      Price: "4",
+      Lore: { "" } }
+
+  - { mcmmo.perks.lucky.taming: "MCMMO Lucky taming",
+      Price: "4",
+      Lore: { "" } }
+
+  - { mcmmo.perks.lucky.unarmed: "MCMMO Lucky unarmed",
+      Price: "4",
+      Lore: { "" } }
+
+  - { mcmmo.perks.lucky.woodcutting: "MCMMO Lucky woodcutting",
+      Price: "4",
+      Lore: { "" } }
+
+
+  # =========================== #
+  # MCMMO (Money/Experience Boosters):
+  # =========================== #
+  - { mcmmo.perks.xp.double.all: "MCMMO Double XP (all skills)",
+      Price: "7",
+      Lore: { "" } }
+
+  - { mcmmo.perks.xp.triple.all: "MCMMO Triple XP (all skills)",
+      Price: "7",
+      Lore: { "" } }
+
+  - { mcmmo.perks.xp.quadruple.all: "MCMMO Quadruple XP (all skills)",
+      Price: "7",
+      Lore: { "" } }
+
+
+  # =========================== #
+  # MCMMO (Reduce ability cooldown time):
+  # =========================== #
+  - { mcmmo.perks.cooldowns.halved.10: "MCMMO Cooldown Reduction (quarter)",
+      Price: "4",
+      Lore: { "" } }
+
+  - { mcmmo.perks.cooldowns.quartered.10: "MCMMO Cooldown Reduction (half)",
+      Price: "5",
+      Lore: { "" } }
+
+  - { mcmmo.perks.cooldowns.thirded.10: "MCMMO Cooldown Reduction (third)",
+      Price: "6",
+      Lore: { "" } }
+
+
+  # =========================== #
+  # HEALTH BOOSTERS:
+  # =========================== #
+  - { health_booster_max_hp_15: "Health Booster (30%)",
+      Price: "3",
+      Lore: { "" } }
+
+  - { health_booster_max_hp_20: "Health Booster (40%)",
+      Price: "4",
+      Lore: { "" } }
+
+  - { health_booster_max_hp_25: "Health Booster (50%)",
+      Price: "5",
+      Lore: { "" } }
+
+  - { health_booster_max_hp_30: "Health Booster (60%)",
+      Price: "6",
+      Lore: { "" } }
+
+  - { health_booster_max_hp_35: "Health Booster (70%)",
+      Price: "7",
+      Lore: { "" } }
+
+  - { health_booster_max_hp_40: "Health Booster (80%)",
+      Price: "8",
+      Lore: { "" } }
+
+  - { health_booster_max_hp_45: "Health Booster (90%)",
+      Price: "9",
+      Lore: { "" } }
+
+  - { health_booster_max_hp_50: "Health Booster (100%)",
+      Price: "10",
+      Lore: { "" } }
+
+
+  # =========================== #
+  # JOBS:
+  # =========================== #
+  - { jobs.max.5: "5 Max Jobs",
+      Price: "4",
+      Lore: { "" } }
+
+  - { jobs.max.6: "6 Max Jobs",
+      Price: "5",
+      Lore: { "" } }
+
+  - { jobs.max.7: "7 Max Jobs",
+      Price: "6",
+      Lore: { "" } }
+
+  - { jobs.max.8: "8 Max Jobs",
+      Price: "7",
+      Lore: { "" } }
+
+  - { jobs.boost.all.exp.2: "XP Boost (all jobs)",
+      Price: "15",
+      Lore: { "" } }
+
+  - { jobs.boost.all.money.2: "Money Boost (all jobs)",
+      Price: "15",
+      Lore: { "" } }
+
+  - { jobs.boost.woodcutter.all.2: "Exp & Money boost (woodcutter)",
+      Price: "3",
+      Lore: { "" } }
+
+  - { jobs.boost.miner.all.2: "Exp & Money boost (miner)",
+      Price: "3",
+      Lore: { "" } }
+
+  - { jobs.boost.builder.all.2: "Exp & Money boost (builder)",
+      Price: "3",
+      Lore: { "" } }
+
+  - { jobs.boost.digger.all.2: "Exp & Money boost (digger)",
+      Price: "3",
+      Lore: { "" } }
+
+  - { jobs.boost.farmer.all.2: "Exp & Money boost (farmer)",
+      Price: "3",
+      Lore: { "" } }
+
+  - { jobs.boost.hunter.all.2: "Exp & Money boost (hunter)",
+      Price: "3",
+      Lore: { "" } }
+
+  - { jobs.boost.fisherman.all.2: "Exp & Money boost (fisherman)",
+      Price: "3",
+      Lore: { "" } }
+
+  - { jobs.boost.weaponsmith.all.2: "Exp & Money boost (weaponsmith)",
+      Price: "3",
+      Lore: { "" } }
+
+  - { jobs.boost.brewer.all.2: "Exp & Money boost (brewer)",
+      Price: "3",
+      Lore: { "" } }
+
+  - { jobs.boost.enchanter.all.2: "Exp & Money boost (enchanter)",
+      Price: "3",
+      Lore: { "" } }
+
+
+  # =========================== #
+  # KITS:
+  # =========================== #
+  - { cmi.kit.sf_ingots: "Slimefun Ingots Kit",
+      Price: "7",
+      Lore: { "" } }
+
+  - { cmi.kit.sf_dust: "Slimefun Dust Kit",
+      Price: "7",
+      Lore: { "" } }
+
+  - { cmi.kit.glass: "Glass Kit",
+      Price: "4",
+      Lore: { "" } }
+
+  - { cmi.kit.terracotta: "Terracotta Kit",
+      Price: "4",
+      Lore: { "" } }
+
+  - { cmi.kit.banner: "Banner Kit",
+      Price: "3",
+      Lore: { "" } }
+
+  - { cmi.kit.wool: "Wool Kit",
+      Price: "5",
+      Lore: { "" } }
+
+  - { cmi.kit.pyro: "Pyro Kit",
+      Price: "4",
+      Lore: { "" } }
+  

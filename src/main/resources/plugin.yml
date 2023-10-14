@@ -1,0 +1,11 @@
+name: JeriCraftPerks
+version: '${project.version}'
+main: com.chalwk.jericraftperks.Main
+api-version: '1.20'
+authors: [ Chalwk ]
+description: Shows a player a list of perks they have purchased.
+commands:
+  perks:
+    description: Shows a player a list of perks they have purchased.
+    usage: /<command>
+    aliases: [ purchases ]
