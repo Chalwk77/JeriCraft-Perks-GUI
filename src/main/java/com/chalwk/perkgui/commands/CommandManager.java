@@ -45,8 +45,10 @@ public class CommandManager implements CommandExecutor, TabCompleter {
                 for (int i = 0; i < getSubCommands().size(); i++) {
                     String subCommand = getSubCommands().get(i).getName();
                     String permissionNode = getSubCommands().get(i).getPermission();
-                    if (args[0].equalsIgnoreCase(subCommand) && hasPermission(player, permissionNode)) {
-                        getSubCommands().get(i).perform(player, args);
+                    if (args[0].equalsIgnoreCase(subCommand)) {
+                        if (hasPermission(player, permissionNode)) {
+                            getSubCommands().get(i).perform(player, args);
+                        }
                         return true;
                     }
                 }
