@@ -39,22 +39,27 @@ public class CommandManager implements CommandExecutor, TabCompleter {
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        if (sender instanceof Player) {
-            Player player = (Player) sender;
-            if (args.length > 0) {
-                for (int i = 0; i < getSubCommands().size(); i++) {
-                    String subCommand = getSubCommands().get(i).getName();
-                    String permissionNode = getSubCommands().get(i).getPermission();
-                    if (args[0].equalsIgnoreCase(subCommand)) {
-                        if (hasPermission(player, permissionNode)) {
-                            getSubCommands().get(i).perform(player, args);
-                        }
-                        return true;
+
+        if (!(sender instanceof Player)) {
+            log.info("Only players can use this command!");
+            return true;
+        }
+
+        Player player = (Player) sender;
+        if (args.length > 0) {
+            for (int i = 0; i < getSubCommands().size(); i++) {
+                String subCommand = getSubCommands().get(i).getName();
+                String permissionNode = getSubCommands().get(i).getPermission();
+                if (args[0].equalsIgnoreCase(subCommand)) {
+                    if (hasPermission(player, permissionNode)) {
+                        getSubCommands().get(i).perform(player, args);
                     }
+                    return true;
                 }
             }
-            send(player, "&cInvalid Syntax. Usage: &b/perks show/reload");
         }
+
+        send(player, "&cInvalid Syntax. Usage: &b/perks show/reload");
         return true;
     }
 
