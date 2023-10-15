@@ -3,13 +3,15 @@
 # Copyright, 2023, Jericho Crosby <jericho.crosby227@gmail.com>
 ###############################################################
 
+MAIN-MENU-TITLE: "&b&lJeriCraft Perks"
 GUI_TITLE: "&b&lYOUR PERKS:"
 GUI_CLOSE_BUTTON: "&cClose!"
 GUI_PREVIOUS_PAGE: "&bPrevious Page"
 GUI_NEXT_PAGE: "&bNext Page"
-NO_PERKS: "&cYou don't have any perks!"
 
-MAIN-MENU-TITLE: "&b&lJeriCraft Perks"
+NO_PERKS: "&cYou don't have any perks in the &b&l{category} &ccategory!"
+
+GUI_PROFILE_BUTTON: "&b&lYour Profile"
 
 CATEGORIES:
 
@@ -26,6 +28,7 @@ CATEGORIES:
         worldguard.region.unlimited:
           name: "&b&lRemove Land Claim Restrictions"
           icon: "BOOK"
+          price: 8
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$8"
@@ -35,6 +38,7 @@ CATEGORIES:
         coloured_name:
           name: "&b&lColoured Name"
           icon: "BOOK"
+          price: 5
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$5"
@@ -43,6 +47,7 @@ CATEGORIES:
         custom_name_prefix:
           name: "&b&lCustom Name Prefix"
           icon: "BOOK"
+          price: 10
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$10"
@@ -54,6 +59,7 @@ CATEGORIES:
         custom_name_suffix:
           name: "&b&lCustom Name Suffix"
           icon: "BOOK"
+          price: 10
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$10"
@@ -65,6 +71,7 @@ CATEGORIES:
         magnet.use:
           name: "&b&lMagnet (command)"
           icon: "BOOK"
+          price: 5
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$5"
@@ -75,6 +82,7 @@ CATEGORIES:
         nv.use:
           name: "&b&lNight Vision (command)"
           icon: "BOOK"
+          price: 5
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$5"
@@ -85,6 +93,7 @@ CATEGORIES:
         cmi.colors.publicmessage.*:
           name: "&b&lText Formatting"
           icon: "BOOK"
+          price: 3
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$3"
@@ -96,6 +105,7 @@ CATEGORIES:
         cmi.command.gm.creative:
           name: "&b&lCreative Mode (command)"
           icon: "BOOK"
+          price: 55
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$55"
@@ -111,6 +121,7 @@ CATEGORIES:
         cmi.keepinventory:
           name: "&b&lKeep Inventory On Death"
           icon: "BOOK"
+          price: 10
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$10"
@@ -119,6 +130,7 @@ CATEGORIES:
         cmi.keepexp:
           name: "&b&lKeep EXP On Death"
           icon: "BOOK"
+          price: 6
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$6"
@@ -127,6 +139,7 @@ CATEGORIES:
         cmi.command.sethome.unlimited:
           name: "&b&lUnlimited Homes (command)"
           icon: "BOOK"
+          price: 7
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$7"
@@ -135,6 +148,7 @@ CATEGORIES:
         cmi.command.ext:
           name: "&b&lExtinguish (command)"
           icon: "BOOK"
+          price: 3
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$3"
@@ -143,6 +157,7 @@ CATEGORIES:
         cmi.command.clear:
           name: "&b&lClear Inventory (command)"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$4"
@@ -154,6 +169,7 @@ CATEGORIES:
         cmi.command.feed:
           name: "&b&lFeed (command)"
           icon: "BOOK"
+          price: 6
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$6"
@@ -162,6 +178,7 @@ CATEGORIES:
         cmi.command.fly:
           name: "&b&lFly (command)"
           icon: "BOOK"
+          price: 8
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$8"
@@ -172,6 +189,7 @@ CATEGORIES:
         cmi.command.god:
           name: "&b&lGod Mode (command)"
           icon: "BOOK"
+          price: 8
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$8"
@@ -181,6 +199,7 @@ CATEGORIES:
         cmi.command.heal:
           name: "&b&lHeal (command)"
           icon: "BOOK"
+          price: 6
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$6"
@@ -190,6 +209,7 @@ CATEGORIES:
         cmi.command.ptime:
           name: "&b&lPersonal Time (command)"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$4"
@@ -201,6 +221,7 @@ CATEGORIES:
         cmi.command.pweather:
           name: "&b&lPersonal Weather (command)"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$4"
@@ -212,6 +233,7 @@ CATEGORIES:
         cmi.command.repair:
           name: "&b&lRepair hand (command)"
           icon: "BOOK"
+          price: 7
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$7"
@@ -224,6 +246,7 @@ CATEGORIES:
         cmi.command.all:
           name: "&b&lRepair All (command)"
           icon: "BOOK"
+          price: 9
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$9"
@@ -236,6 +259,7 @@ CATEGORIES:
         cmi.command.flyspeed:
           name: "&b&lFly Speed (command)"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$4"
@@ -247,6 +271,7 @@ CATEGORIES:
         cmi.command.walkspeed:
           name: "&b&lWalk Speed (command)"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$4"
@@ -257,6 +282,7 @@ CATEGORIES:
         cmi.command.top:
           name: "&b&lSurface (command)"
           icon: "BOOK"
+          price: 3
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$3"
@@ -267,6 +293,7 @@ CATEGORIES:
         cmi.command.setwarp:
           name: "&b&lSet Warp (command)"
           icon: "BOOK"
+          price: 8
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$8"
@@ -277,6 +304,7 @@ CATEGORIES:
         cmi.command.setwarp.unlimited:
           name: "&b&lSet Unlimited Warps (command)"
           icon: "BOOK"
+          price: 8
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$8"
@@ -286,6 +314,7 @@ CATEGORIES:
         cmi.command.vanish:
           name: "&b&lVanish (command)"
           icon: "BOOK"
+          price: 10
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$10"
@@ -300,6 +329,7 @@ CATEGORIES:
         cmi.command.workbench:
           name: "&b&lPortable Workbench (command)"
           icon: "BOOK"
+          price: 2
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$2"
@@ -310,6 +340,7 @@ CATEGORIES:
         cmi.command.loom:
           name: "&b&lPortable Loom (command)"
           icon: "BOOK"
+          price: 2
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$2"
@@ -320,6 +351,7 @@ CATEGORIES:
         cmi.command.me:
           name: "&b&lMe (command)"
           icon: "BOOK"
+          price: 2
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$2"
@@ -330,6 +362,7 @@ CATEGORIES:
         cmi.command.merchant:
           name: "&b&lMerchant (command)"
           icon: "BOOK"
+          price: 5
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$5"
@@ -341,6 +374,7 @@ CATEGORIES:
         cmi.scrollpainting:
           name: "&b&lPainting Scroll"
           icon: "BOOK"
+          price: 5
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$5"
@@ -352,6 +386,7 @@ CATEGORIES:
         cmi.command.sc:
           name: "&b&lSign Copy (command)"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aSurvival Perk"
             - "&7Price: &a$4"
@@ -375,6 +410,7 @@ CATEGORIES:
         mcmmo.perks.lucky.acrobatics:
           name: "&b&lMCMMO Lucky acrobatics"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$4"
@@ -383,6 +419,7 @@ CATEGORIES:
         mcmmo.perks.lucky.archery:
           name: "&b&lMCMMO Lucky archery"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$4"
@@ -391,6 +428,7 @@ CATEGORIES:
         mcmmo.perks.lucky.axes:
           name: "&b&lMCMMO Lucky axes"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$4"
@@ -399,6 +437,7 @@ CATEGORIES:
         mcmmo.perks.lucky.excavation:
           name: "&b&lMCMMO Lucky excavation"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$4"
@@ -407,6 +446,7 @@ CATEGORIES:
         mcmmo.perks.lucky.fishing:
           name: "&b&lMCMMO Lucky fishing"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$4"
@@ -415,6 +455,7 @@ CATEGORIES:
         mcmmo.perks.lucky.herbalism:
           name: "&b&lMCMMO Lucky herbalism"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$4"
@@ -423,6 +464,7 @@ CATEGORIES:
         mcmmo.perks.lucky.mining:
           name: "&b&lMCMMO Lucky mining"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$4"
@@ -431,6 +473,7 @@ CATEGORIES:
         mcmmo.perks.lucky.repair:
           name: "&b&lMCMMO Lucky repair"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$4"
@@ -439,6 +482,7 @@ CATEGORIES:
         mcmmo.perks.lucky.smelting:
           name: "&b&lMCMMO Lucky smelting"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$4"
@@ -447,6 +491,7 @@ CATEGORIES:
         mcmmo.perks.lucky.swords:
           name: "&b&lMCMMO Lucky swords"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$4"
@@ -455,6 +500,7 @@ CATEGORIES:
         mcmmo.perks.lucky.taming:
           name: "&b&lMCMMO Lucky taming"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$4"
@@ -463,6 +509,7 @@ CATEGORIES:
         mcmmo.perks.lucky.unarmed:
           name: "&b&lMCMMO Lucky unarmed"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$4"
@@ -471,6 +518,7 @@ CATEGORIES:
         mcmmo.perks.lucky.woodcutting:
           name: "&b&lMCMMO Lucky woodcutting"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$4"
@@ -479,6 +527,7 @@ CATEGORIES:
         mcmmo.perks.xp.double.all:
           name: "&b&lMCMMO Double XP (all skills)"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$4"
@@ -487,6 +536,7 @@ CATEGORIES:
         mcmmo.perks.xp.triple.all:
           name: "&b&lMCMMO Triple XP (all skills)"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$4"
@@ -495,6 +545,7 @@ CATEGORIES:
         mcmmo.perks.xp.quadruple.all:
           name: "&b&lMCMMO Quadruple XP (all skills)"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$4"
@@ -503,6 +554,7 @@ CATEGORIES:
         mcmmo.perks.cooldowns.halved.10:
           name: "&b&lMCMMO Cooldown Reduction (quarter)"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$4"
@@ -511,6 +563,7 @@ CATEGORIES:
         mcmmo.perks.cooldowns.quartered.10:
           name: "&b&lMCMMO Cooldown Reduction (half)"
           icon: "BOOK"
+          price: 5
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$5"
@@ -519,6 +572,7 @@ CATEGORIES:
         mcmmo.perks.cooldowns.thirded.10:
           name: "&b&lMCMMO Cooldown Reduction (third)"
           icon: "BOOK"
+          price: 6
           lore:
             - "&7Type: &aMCMMO Perk"
             - "&7Price: &a$6"
@@ -538,6 +592,7 @@ CATEGORIES:
         health_booster_max_hp_15:
           name: "&b&lHealth Booster (30%)"
           icon: "BOOK"
+          price: 3
           lore:
             - "&7Type: &aHealth Boosters"
             - "&7Price: &a$3"
@@ -546,6 +601,7 @@ CATEGORIES:
         health_booster_max_hp_20:
           name: "&b&lHealth Booster (40%)"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aHealth Boosters"
             - "&7Price: &a$4"
@@ -554,6 +610,7 @@ CATEGORIES:
         health_booster_max_hp_25:
           name: "&b&lHealth Booster (50%)"
           icon: "BOOK"
+          price: 5
           lore:
             - "&7Type: &aHealth Boosters"
             - "&7Price: &a5"
@@ -562,6 +619,7 @@ CATEGORIES:
         health_booster_max_hp_30:
           name: "&b&lHealth Booster (60%)"
           icon: "BOOK"
+          price: 6
           lore:
             - "&7Type: &aHealth Boosters"
             - "&7Price: &a$6"
@@ -570,6 +628,7 @@ CATEGORIES:
         health_booster_max_hp_35:
           name: "&b&lHealth Booster (70%)"
           icon: "BOOK"
+          price: 7
           lore:
             - "&7Type: &aHealth Boosters"
             - "&7Price: &a$7"
@@ -578,6 +637,7 @@ CATEGORIES:
         health_booster_max_hp_40:
           name: "&b&lHealth Booster (80%)"
           icon: "BOOK"
+          price: 8
           lore:
             - "&7Type: &aHealth Boosters"
             - "&7Price: &a$8"
@@ -586,6 +646,7 @@ CATEGORIES:
         health_booster_max_hp_45:
           name: "&b&lHealth Booster (90%)"
           icon: "BOOK"
+          price: 9
           lore:
             - "&7Type: &aHealth Boosters"
             - "&7Price: &a$9"
@@ -594,6 +655,7 @@ CATEGORIES:
         health_booster_max_hp_50:
           name: "&b&lHealth Booster (100%)"
           icon: "BOOK"
+          price: 10
           lore:
             - "&7Type: &aHealth Boosters"
             - "&7Price: &a$10"
@@ -613,6 +675,7 @@ CATEGORIES:
         jobs.max.5:
           name: "&b&l5 Max Jobs"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aJobs Perk"
             - "&7Price: &a$4"
@@ -621,6 +684,7 @@ CATEGORIES:
         jobs.max.6:
           name: "&b&l6 Max Jobs"
           icon: "BOOK"
+          price: 5
           lore:
             - "&7Type: &aJobs Perk"
             - "&7Price: &a$5"
@@ -629,6 +693,7 @@ CATEGORIES:
         jobs.max.7:
           name: "&b&l7 Max Jobs"
           icon: "BOOK"
+          price: 6
           lore:
             - "&7Type: &aJobs Perk"
             - "&7Price: &a$6"
@@ -637,6 +702,7 @@ CATEGORIES:
         jobs.max.8:
           name: "&b&l8 Max Jobs"
           icon: "BOOK"
+          price: 7
           lore:
             - "&7Type: &aJobs Perk"
             - "&7Price: &a$7"
@@ -645,6 +711,7 @@ CATEGORIES:
         jobs.boost.all.exp.2:
           name: "&b&lXP Boost (all jobs)"
           icon: "BOOK"
+          price: 15
           lore:
             - "&7Type: &aJobs Perk"
             - "&7Price: &a$15"
@@ -653,6 +720,7 @@ CATEGORIES:
         jobs.boost.all.money.2:
           name: "&b&lMoney Boost (all jobs)"
           icon: "BOOK"
+          price: 15
           lore:
             - "&7Type: &aJobs Perk"
             - "&7Price: &a$15"
@@ -661,6 +729,7 @@ CATEGORIES:
         jobs.boost.woodcutter.all.2:
           name: "&b&lExp & Money boost (woodcutter)"
           icon: "BOOK"
+          price: 3
           lore:
             - "&7Type: &aJobs Perk"
             - "&7Price: &a$3"
@@ -669,6 +738,7 @@ CATEGORIES:
         jobs.boost.miner.all.2:
           name: "&b&lExp & Money boost (miner)"
           icon: "BOOK"
+          price: 3
           lore:
             - "&7Type: &aJobs Perk"
             - "&7Price: &a$3"
@@ -677,6 +747,7 @@ CATEGORIES:
         jobs.boost.builder.all.2:
           name: "&b&lExp & Money boost (builder)"
           icon: "BOOK"
+          price: 3
           lore:
             - "&7Type: &aJobs Perk"
             - "&7Price: &a$3"
@@ -685,6 +756,7 @@ CATEGORIES:
         jobs.boost.digger.all.2:
           name: "&b&lExp & Money boost (digger)"
           icon: "BOOK"
+          price: 3
           lore:
             - "&7Type: &aJobs Perk"
             - "&7Price: &a$3"
@@ -693,6 +765,7 @@ CATEGORIES:
         jobs.boost.farmer.all.2:
           name: "&b&lExp & Money boost (farmer)"
           icon: "BOOK"
+          price: 3
           lore:
             - "&7Type: &aJobs Perk"
             - "&7Price: &a$3"
@@ -701,6 +774,7 @@ CATEGORIES:
         jobs.boost.hunter.all.2:
           name: "&b&lExp & Money boost (hunter)"
           icon: "BOOK"
+          price: 3
           lore:
             - "&7Type: &aJobs Perk"
             - "&7Price: &a$3"
@@ -709,6 +783,7 @@ CATEGORIES:
         jobs.boost.fisherman.all.2:
           name: "&b&lExp & Money boost (fisherman)"
           icon: "BOOK"
+          price: 3
           lore:
             - "&7Type: &aJobs Perk"
             - "&7Price: &a$3"
@@ -717,6 +792,7 @@ CATEGORIES:
         jobs.boost.weaponsmith.all.2:
           name: "&b&lExp & Money boost (weaponsmith)"
           icon: "BOOK"
+          price: 3
           lore:
             - "&7Type: &aJobs Perk"
             - "&7Price: &a$3"
@@ -725,6 +801,7 @@ CATEGORIES:
         jobs.boost.brewer.all.2:
           name: "&b&lExp & Money boost (brewer)"
           icon: "BOOK"
+          price: 3
           lore:
             - "&7Type: &aJobs Perk"
             - "&7Price: &a$3"
@@ -733,6 +810,7 @@ CATEGORIES:
         jobs.boost.enchanter.all.2:
           name: "&b&lExp & Money boost (enchanter)"
           icon: "BOOK"
+          price: 3
           lore:
             - "&7Type: &aJobs Perk"
             - "&7Price: &a$3"
@@ -752,6 +830,7 @@ CATEGORIES:
         cmi.kit.sf_ingots:
           name: "&b&lSlimefun Ingots Kit (command)"
           icon: "BOOK"
+          price: 7
           lore:
             - "&7Type: &aKits"
             - "&7Price: &a$7"
@@ -763,6 +842,7 @@ CATEGORIES:
         cmi.kit.sf_dust:
           name: "&b&lSlimefun Dust Kit (command)"
           icon: "BOOK"
+          price: 7
           lore:
             - "&7Type: &aKits"
             - "&7Price: &a$7"
@@ -774,6 +854,7 @@ CATEGORIES:
         cmi.kit.glass:
           name: "&b&lGlass Kit (command)"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aKits"
             - "&7Price: &a$4"
@@ -785,6 +866,7 @@ CATEGORIES:
         cmi.kit.terracotta:
           name: "&b&lTerracotta Kit (command)"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aKits"
             - "&7Price: &a$4"
@@ -796,6 +878,7 @@ CATEGORIES:
         cmi.kit.banner:
           name: "&b&lBanner Kit (command)"
           icon: "BOOK"
+          price: 3
           lore:
             - "&7Type: &aKits"
             - "&7Price: &a$3"
@@ -807,6 +890,7 @@ CATEGORIES:
         cmi.kit.wool:
           name: "&b&lWool Kit (command)"
           icon: "BOOK"
+          price: 5
           lore:
             - "&7Type: &aKits"
             - "&7Price: &a$5"
@@ -818,6 +902,7 @@ CATEGORIES:
         cmi.kit.pyro:
           name: "&b&lPyro Kit (command)"
           icon: "BOOK"
+          price: 4
           lore:
             - "&7Type: &aKits"
             - "&7Price: &a$4"

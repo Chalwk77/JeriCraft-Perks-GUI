@@ -13,10 +13,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ShowPerks extends SubCommand {
 
@@ -42,14 +39,27 @@ public class ShowPerks extends SubCommand {
         return "perks.show";
     }
 
+    Map<UUID, Integer> playerData = new HashMap<>();
+
     /**
      * @param sender Player
      * @param args   String[]
      */
     @Override
     public void perform(Player sender, String[] args) {
+
         CustomGUI menu = new CustomGUI(formatMSG(config.getString("MAIN-MENU-TITLE")), 3);
-        showCloseButton(sender, menu, 22);
+        showCloseButton(sender, menu, 26);
+
+        playerData.put(sender.getUniqueId(), 0);
+
+        ItemStack profileButton = createItem("PLAYER_HEAD", config.getString("GUI_PROFILE_BUTTON"), new ArrayList<>());
+        GUIButton profile = new GUIButton(profileButton);
+        menu.setItem(profile, 13);
+        profile.setAction(() -> {
+            int totalSpent = playerData.get(sender.getUniqueId());
+            sender.sendMessage("You have spent a total of $" + totalSpent + ".");
+        });
 
         int slot = 0;
         for (Map<?, ?> opt : config.getMapList("CATEGORIES")) {
@@ -100,15 +110,25 @@ public class ShowPerks extends SubCommand {
             String node = (String) entry.getKey();
             if (sender.hasPermission(node)) {
                 slot++;
+
                 Map<?, ?> perkData = (Map<?, ?>) entry.getValue();
                 String name = (String) perkData.get("name");
                 String icon = (String) perkData.get("icon");
+
+                int price = (int) perkData.get("price");
+                int totalSpent = playerData.get(sender.getUniqueId());
+                playerData.put(sender.getUniqueId(), totalSpent + price);
+
                 List<String> lore = (List<String>) perkData.get("lore");
                 showPerkButtons(sender, name, icon, lore, menu, slot);
             }
         }
+
         if (slot >= 0) {
             menu.show(sender);
+        } else {
+            sender.sendMessage(formatMSG(config.getString("NO_PERKS").replace("{category}", title)));
+            perform(sender, new String[]{}); // go back to main menu
         }
     }
 
@@ -130,7 +150,6 @@ public class ShowPerks extends SubCommand {
         gui.setItem(button, slot);
 
         ItemStack backButton = createItem("RED_STAINED_GLASS_PANE", config.getString("GUI_PREVIOUS_PAGE"), new ArrayList<>());
-
         GUIButton back = new GUIButton(backButton);
         gui.setItem(back, 45);
         back.setAction(() -> {
