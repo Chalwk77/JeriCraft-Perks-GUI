@@ -12,7 +12,6 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -46,96 +45,93 @@ public class ShowPerks extends SubCommand {
     @Override
     public void perform(Player sender, String[] args) {
 
-        CustomGUI GUI = new CustomGUI(formatMSG(config.getString("GUI_TITLE")), 6);
-        showNavigationButtons(sender, GUI);
+        CustomGUI mainMenu = new CustomGUI(formatMSG(config.getString("MAIN-MENU-TITLE")), 3);
+        showCategories(sender, mainMenu, 3);
 
-        int slot = 0;
-        for (Map<?, ?> opt : config.getMapList("PERMISSIONS")) {
-            if (slot > 52) { // coming in a future update: multiple pages
-                break;
-            }
-            List<String> perk = new ArrayList<>((Collection<? extends String>) opt.keySet());
-            String permissionNode = perk.get(0);
-            if (sender.hasPermission(permissionNode)) {
-                Map<?, ?> data = (Map<?, ?>) opt.get(permissionNode);
-                String name = (String) data.get("name");
-                List<String> lore = (List<String>) data.get("lore");
-                GUIButton perkButton = getGuiButton(sender, name, lore);
-                GUI.setItem(perkButton, slot);
-                slot++;
-            }
-        }
-        if (slot > 0) {
-            GUI.show(sender);
-        } else {
-            sender.sendMessage(formatMSG(config.getString("NO_PERKS")));
-        }
+//        CustomGUI GUI = new CustomGUI(formatMSG(config.getString("GUI_TITLE")), 6);
+//        showNavigationButtons(sender, GUI);
+//
+//        int slot = 0;
+//        for (Map<?, ?> opt : config.getMapList("PERMISSIONS")) {
+//            if (slot > 52) { // coming in a future update: multiple pages
+//                break;
+//            }
+//            List<String> perk = new ArrayList<>((Collection<? extends String>) opt.keySet());
+//            String permissionNode = perk.get(0);
+//            if (sender.hasPermission(permissionNode)) {
+//                Map<?, ?> data = (Map<?, ?>) opt.get(permissionNode);
+//                String name = (String) data.get("name");
+//                List<String> lore = (List<String>) data.get("lore");
+//                GUIButton perkButton = getGuiButton(sender, name, lore);
+//                GUI.setItem(perkButton, slot);
+//                slot++;
+//            }
+//        }
+//        if (slot > 0) {
+//            GUI.show(sender);
+//        } else {
+//            sender.sendMessage(formatMSG(config.getString("NO_PERKS")));
+//        }
     }
 
-    private void showNavigationButtons(Player sender, CustomGUI GUI) {
+    private void showCategories(Player sender, CustomGUI gui, int rows) {
 
-        // LORE:
-        List<String> lore = new ArrayList<>();
-        lore.add(formatMSG("&cMultiple pages coming soon!"));
+        showCloseButton(sender, gui, 22);
 
-        // Previous page:
-        ItemStack previous = new ItemStack(Material.RED_STAINED_GLASS_PANE);
-        ItemMeta previousMeta = previous.getItemMeta();
-        previousMeta.setDisplayName(formatMSG(config.getString("GUI_PREVIOUS_PAGE")));
-        previousMeta.setLore(lore);
-        previous.setItemMeta(previousMeta);
+        int slot = 0;
+        for (Map<?, ?> opt : config.getMapList("CATEGORIES")) {
 
-        GUIButton previousButton = new GUIButton(previous);
-        GUI.setItem(previousButton, 45);
-        previousButton.setAction(sender::closeInventory); // TEMP
+            if (slot > 8) {
+                break;
+            }
 
-        // CLOSE BUTTON:
+            List<String> type = new ArrayList<>((Collection<? extends String>) opt.keySet());
+            String category = type.get(0);
+            Map<?, ?> data = (Map<?, ?>) opt.get(category);
+
+            String title = (String) data.get("title");              // category title
+            String icon = (String) data.get("icon");                // category icon
+            List<String> lore = (List<String>) data.get("lore");    // category lore
+
+            ItemStack item = new ItemStack(Material.valueOf(icon));
+            ItemMeta meta = item.getItemMeta();
+
+            meta.setDisplayName(formatMSG(title));
+            lore.replaceAll(this::formatMSG);
+            meta.setLore(lore);
+
+            meta.addEnchant(Enchantment.DURABILITY, 1, true);
+            meta.addItemFlags(org.bukkit.inventory.ItemFlag.HIDE_ENCHANTS);
+            item.setItemMeta(meta);
+
+            GUIButton button = new GUIButton(item);
+            gui.setItem(button, slot);
+            button.setAction(() -> {
+                gui.close(sender);
+                showPerks(sender, data, title, category);
+            });
+
+            slot = slot + 2;
+        }
+        gui.show(sender);
+    }
+
+    private void showPerks(Player sender, Map<?, ?> data, String title, String category) {
+        //CustomGUI menu = new CustomGUI(formatMSG(title), 53);
+        System.out.println("SHOWING PERKS FOR " + category);
+        List<String> perks = (List<String>) data.get("perks");
+
+
+    }
+
+    private void showCloseButton(Player sender, CustomGUI gui, int slot) {
         ItemStack close = new ItemStack(Material.BARRIER);
         ItemMeta closeMeta = close.getItemMeta();
         closeMeta.setDisplayName(formatMSG(config.getString("GUI_CLOSE_BUTTON")));
         close.setItemMeta(closeMeta);
-
         GUIButton closeButton = new GUIButton(close);
-        GUI.setItem(closeButton, 49);
+        gui.setItem(closeButton, slot);
         closeButton.setAction(sender::closeInventory);
-
-        // Next page:
-        ItemStack next = new ItemStack(Material.GREEN_STAINED_GLASS_PANE);
-        ItemMeta nextMeta = next.getItemMeta();
-        nextMeta.setDisplayName(formatMSG(config.getString("GUI_NEXT_PAGE")));
-        nextMeta.setLore(lore);
-        next.setItemMeta(nextMeta);
-
-        GUIButton nextButton = new GUIButton(next);
-        GUI.setItem(nextButton, 53);
-        nextButton.setAction(sender::closeInventory); // TEMP
-    }
-
-    @NotNull
-    private GUIButton getGuiButton(Player sender, String name, List<String> lore) {
-
-        ItemStack item = newPerkButton(name, lore);
-        GUIButton perkButton = new GUIButton(item);
-        perkButton.setAction(sender::closeInventory);
-
-        return perkButton;
-    }
-
-    @NotNull
-    private ItemStack newPerkButton(String name, List<String> lore) {
-
-        ItemStack item = new ItemStack(Material.BOOK);
-        ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(formatMSG(name));
-
-        lore.replaceAll(this::formatMSG);
-        meta.setLore(lore);
-
-        meta.addEnchant(Enchantment.DURABILITY, 1, true);
-        meta.addItemFlags(org.bukkit.inventory.ItemFlag.HIDE_ENCHANTS);
-
-        item.setItemMeta(meta);
-        return item;
     }
 
     private String formatMSG(String string) {

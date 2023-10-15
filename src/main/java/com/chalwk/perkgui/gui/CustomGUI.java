@@ -37,4 +37,8 @@ public class CustomGUI {
         PlayerDataManager.getData(player).setOpenGUI(this);
         player.openInventory(inventory);
     }
+
+    public void close(Player player) {
+        player.closeInventory();
+    }
 }

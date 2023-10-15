@@ -23,9 +23,6 @@ public class CommandManager implements CommandExecutor, TabCompleter {
     private final ArrayList<SubCommand> subcommands = new ArrayList<>();
 
     public CommandManager() {
-        //subcommands.add(new ShowPerks());
-        //subcommands.add(new Reload());
-
         Reflections reflections = new Reflections("com.chalwk.perkgui.commands.subcommands");
         for (Class<?> commandClass : reflections.getSubTypesOf(SubCommand.class)) {
             try {
