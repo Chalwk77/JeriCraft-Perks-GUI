@@ -3,8 +3,6 @@ package com.chalwk.perkgui.commands.subcommands;
 
 import com.chalwk.perkgui.Main;
 import com.chalwk.perkgui.commands.SubCommand;
-import com.chalwk.perkgui.data.PlayerData;
-import com.chalwk.perkgui.data.PlayerDataManager;
 import com.chalwk.perkgui.gui.CustomGUI;
 import com.chalwk.perkgui.gui.GUIButton;
 import org.bukkit.ChatColor;
@@ -44,6 +42,10 @@ public class ShowPerks extends SubCommand {
         return "perks.show";
     }
 
+    /**
+     * @param sender Player
+     * @param args   String[]
+     */
     @Override
     public void perform(Player sender, String[] args) {
         CustomGUI menu = new CustomGUI(formatMSG(config.getString("MAIN-MENU-TITLE")), 3);
@@ -83,12 +85,12 @@ public class ShowPerks extends SubCommand {
         menu.show(sender);
     }
 
+    /**
+     * @param sender Player
+     * @param data Map<?, ?>
+     * @param title String
+     */
     private void showPerks(Player sender, Map<?, ?> data, String title) {
-
-        PlayerData gui = PlayerDataManager.getData(sender);
-        if (gui != null && gui.getOpenGUI() != null) {
-            gui.setOpenGUI(null);
-        }
 
         CustomGUI menu = new CustomGUI(formatMSG(title), 6);
 
@@ -110,6 +112,14 @@ public class ShowPerks extends SubCommand {
         }
     }
 
+    /**
+     * @param sender Player
+     * @param name String (title)
+     * @param icon String (Material)
+     * @param lore List<String>
+     * @param gui CustomGUI
+     * @param slot int
+     */
     private void showPerkButtons(Player sender, String name, String icon, List<String> lore, CustomGUI gui, int slot) {
 
         ItemStack item = createItem(icon, name, lore);
@@ -124,11 +134,19 @@ public class ShowPerks extends SubCommand {
         GUIButton back = new GUIButton(backButton);
         gui.setItem(back, 45);
         back.setAction(() -> {
+            gui.close(sender);
+            perform(sender, new String[]{});
         });
 
         showCloseButton(sender, gui, 53);
     }
 
+    /**
+     * @param icon Material
+     * @param name String (title)
+     * @param lore List<String>
+     * @return ItemStack
+     */
     private ItemStack createItem(String icon, String name, List<String> lore) {
 
         ItemStack item = new ItemStack(Material.valueOf(icon));
@@ -145,6 +163,11 @@ public class ShowPerks extends SubCommand {
         return item;
     }
 
+    /**
+     * @param sender Player
+     * @param gui CustomGUI
+     * @param slot int
+     */
     private void showCloseButton(Player sender, CustomGUI gui, int slot) {
         ItemStack close = createItem("BARRIER", config.getString("GUI_CLOSE_BUTTON"), new ArrayList<>());
         GUIButton closeButton = new GUIButton(close);
@@ -152,7 +175,11 @@ public class ShowPerks extends SubCommand {
         closeButton.setAction(sender::closeInventory);
     }
 
-    private String formatMSG(String string) {
-        return ChatColor.translateAlternateColorCodes('&', string);
+    /**
+     * @param message String
+     * @return String
+     */
+    private String formatMSG(String message) {
+        return ChatColor.translateAlternateColorCodes('&', message);
     }
 }
