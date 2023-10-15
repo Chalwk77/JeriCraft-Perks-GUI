@@ -29,7 +29,7 @@ PERMISSIONS:
         - "&7Type: &aSurvival Perk"
         - "&7Price: &a$5"
         - " "
-        - "&aGet a cool coloured name in-game."
+        - "&aGet a cool coloured name."
   - custom_name_prefix:
       name: "&b&lCustom Name Prefix"
       lore:
@@ -74,8 +74,8 @@ PERMISSIONS:
         - " "
         - "&aAllows the use of text formatting."
         - "&aUse text formatting everywhere:"
-        - "&a - Chat, books, signs, nametags, anywhere you can type text."
-        - "&aUse the &b/colors &acommand in-game to see a list of formatting options."
+        - "&aChat, books, signs, nametags, anywhere you can type text!"
+        - "&aUse the &b/colors &acommand to see a list of formatting options."
   - cmi.command.gm.creative:
       name: "&b&lCreative Mode (command)"
       lore:
@@ -127,7 +127,7 @@ PERMISSIONS:
         - "&aClear your entire inventory."
         - "&aWarning: Includes armor, tools, weapons, blocks, everything."
         - " "
-        - "Usage: &b/clear/ci"
+        - "&aUsage: &b/clear/ci"
   - cmi.command.feed:
       name: "&b&lFeed (command)"
       lore:
@@ -168,6 +168,7 @@ PERMISSIONS:
         - " "
         - "&aAllows you to change the time for yourself."
         - "&aOther players still see normal time!"
+        - " "
         - "&aUsage: &b/ptime [freeze/unfreeze/day/night/dusk/morning/realtime/reset]"
   - cmi.command.pweather:
       name: "&b&lPersonal Weather (command)"
@@ -175,8 +176,9 @@ PERMISSIONS:
         - "&7Type: &aSurvival Perk"
         - "&7Price: &a$4"
         - " "
-        - "&aAllows you to change the weather for yourself"
+        - "&aAllows you to change the weather for yourself."
         - "&aOther players still see normal weather!"
+        - " "
         - "&aUsage: &b/pweather [ sun/rain/reset ]"
   - cmi.command.repair:
       name: "&b&lRepair hand (command)"
@@ -185,9 +187,10 @@ PERMISSIONS:
         - "&7Price: &a$7"
         - " "
         - "&aRepair the item in your hand."
-        - "&aUsage: &b/repair hand"
         - "&aRestriction: You must not repair items for other players"
         - "&aor this perk will be revoked. Personal use only."
+        - " "
+        - "&aUsage: &b/repair hand"
   - cmi.command.all:
       name: "&b&lRepair All (command)"
       lore:
@@ -195,9 +198,10 @@ PERMISSIONS:
         - "&7Price: &a$9"
         - " "
         - "&aRepair whole inventory."
-        - "&aUsage: &b/repair [all]"
         - "&aRestriction: You must not repair items for other players"
         - "&aor this perk will be revoked. Personal use only."
+        - " "
+        - "&aUsage: &b/repair [all]"
   - cmi.command.flyspeed:
       name: "&b&lFly Speed (command)"
       lore:
@@ -205,8 +209,9 @@ PERMISSIONS:
         - "&7Price: &a$4"
         - " "
         - "&aFlying too slow? Speed up your flight!"
+        - "&a&lREQUIRES THE FLY PERK"
+        - " "
         - "&aUsage: &b/flyspeed [ new speed ]"
-        - "&aREQUIRES THE FLY PERK"
   - cmi.command.walkspeed:
       name: "&b&lWalk Speed (command)"
       lore:
@@ -214,6 +219,7 @@ PERMISSIONS:
         - "&7Price: &a$4"
         - " "
         - "&aWalking too slow? Speed up your strut!"
+        - " "
         - "&aUsage: &b/walkspeed [ new speed ]"
   - cmi.command.top:
       name: "&b&lSurface (command)"
@@ -221,7 +227,8 @@ PERMISSIONS:
         - "&7Type: &aSurvival Perk"
         - "&7Price: &a$3"
         - " "
-        - "&aReturn to the surface (Teleport to highest point at your location)"
+        - "&aReturn to the surface (Teleport to highest point at your location)."
+        - " "
         - "&aUsage: &b/top"
   - cmi.command.setwarp:
       name: "&b&lSet Warp (command)"
@@ -229,9 +236,9 @@ PERMISSIONS:
         - "&7Type: &aSurvival Perk"
         - "&7Price: &a$8"
         - " "
-        - "&aGet access to our set-warp system."
+        - "&aGet access to our set-warp system (max 10 warps)."
+        - " "
         - "&aUsage: &b/setwarp [ warp name ]"
-        - "&aMax 10 warps."
   - cmi.command.setwarp.unlimited:
       name: "&b&lSet Unlimited Warps (command)"
       lore:
@@ -248,10 +255,11 @@ PERMISSIONS:
         - " "
         - "&aDon't want to be seen?"
         - "&aHide from other players with our vanish system."
-        - "&aUsage: &b/vanish"
         - "&aDoes not hide you from staff members."
         - "&aYou will be hidden on the tab list, and no quit/join message will appear."
         - "&aIf you're in vanish when you log out, you will still be in vanish when you return."
+        - " "
+        - "&aUsage: &b/vanish"
   - cmi.command.workbench:
       name: "&b&lPortable Workbench (command)"
       lore:
@@ -259,6 +267,7 @@ PERMISSIONS:
         - "&7Price: &a$2"
         - " "
         - "&aGet access to a portable crafting table."
+        - " "
         - "&aUsage: &b/workbench"
   - cmi.command.loom:
       name: "&b&lPortable Loom (command)"
@@ -267,6 +276,7 @@ PERMISSIONS:
         - "&7Price: &a$2"
         - " "
         - "&aGet access to a portable loom."
+        - " "
         - "&aUsage: &b/loom"
   - cmi.command.me:
       name: "&b&lMe (command)"
@@ -275,6 +285,7 @@ PERMISSIONS:
         - "&7Price: &a$2"
         - " "
         - "&aSends special message to all players"
+        - " "
         - "&aUsage: &b/me [ text ]"
   - cmi.command.merchant:
       name: "&b&lMerchant (command)"
@@ -284,6 +295,7 @@ PERMISSIONS:
         - " "
         - "&aGet access to our custom Merchant GUI."
         - "&aMimics merchant trader GUIs at top levels."
+        - " "
         - "&aUsage: &b/merchant [ level ]"
   - cmi.scrollpainting:
       name: "&b&lPainting Scroll"
@@ -639,8 +651,9 @@ PERMISSIONS:
         - "&7Price: &a$7"
         - " "
         - "&aIncludes 16 of each Slimefun ingot."
+        - "&cAccess: Once every 24 hours."
+        - " "
         - "&aUsage: &b/kit sf_ingots"
-        - "&aAccess: Once every 24 hours."
   - cmi.kit.sf_dust:
       name: "&b&lSlimefun Dust Kit"
       lore:
@@ -648,8 +661,9 @@ PERMISSIONS:
         - "&7Price: &a$7"
         - " "
         - "&aIncludes 16 of each Slimefun dust."
+        - "&cAccess: Once every 24 hours."
+        - " "
         - "&aUsage: &b/kit sf_dust"
-        - "&aAccess: Once every 24 hours."
   - cmi.kit.glass:
       name: "&b&lGlass Kit"
       lore:
@@ -657,8 +671,9 @@ PERMISSIONS:
         - "&7Price: &a$4"
         - " "
         - "&aKit includes 16 of each glass (pane/stained)."
+        - "&cAccess: Once every 24 hours."
+        - " "
         - "&aUsage:  &b/kit glass"
-        - "&aAccess: Once every 24 hours."
   - cmi.kit.terracotta:
       name: "&b&lTerracotta Kit"
       lore:
@@ -666,8 +681,9 @@ PERMISSIONS:
         - "&7Price: &a$4"
         - " "
         - "&aIncludes 16 of each terracotta block."
+        - "&cAccess: Once every 24 hours."
+        - " "
         - "&aUsage:  &b/kit terracotta"
-        - "&aAccess: Once every 24 hours."
   - cmi.kit.banner:
       name: "&b&lBanner Kit"
       lore:
@@ -675,8 +691,9 @@ PERMISSIONS:
         - "&7Price: &a$3"
         - " "
         - "&aIncludes 16 of each banner an complementary loom."
+        - "&cAccess: Once every 24 hours."
+        - " "
         - "&aUsage:  &b/kit banner"
-        - "&aAccess: Once every 24 hours."
   - cmi.kit.wool:
       name: "&b&lWool Kit"
       lore:
@@ -684,8 +701,9 @@ PERMISSIONS:
         - "&7Price: &a$5"
         - " "
         - "&aIncludes 16 of each wool and complementary shears with Efficiency V."
+        - "&cAccess: Once every 24 hours."
+        - " "
         - "&aUsage: &b/kit wool"
-        - "&aAccess: Once every 24 hours."
   - cmi.kit.pyro:
       name: "&b&lPyro Kit"
       lore:
@@ -694,9 +712,9 @@ PERMISSIONS:
         - " "
         - "&aIncludes:"
         - "&aDiamond Bow (flame enchant) with 16 arrows."
-        - "&aGolden Sword (Fire Aspect II, Sharpness I, Unbreaking III)"
-        - "&aPotion of Fire Resistance (3 minutes)"
-        - "&a8 TNT Blocks"
-        - "&a3 Lava Buckets"
+        - "&aGolden Sword (Fire Aspect II, Sharpness I, Unbreaking III)."
+        - "&aPotion of Fire Resistance (3 minutes)."
+        - "&a8 TNT Blocks and &a3 Lava Buckets."
+        - "&cAccess: Once every 24 hours."
+        - " "
         - "&aUsage: &b/kit pyro"
-        - "&aAccess: Once every 24 hours."
