@@ -68,8 +68,7 @@ public class CommandManager implements CommandExecutor, TabCompleter {
         if (player.hasPermission(permission)) {
             return true;
         } else {
-            String errorMessage = "&cYou do not have permission to use this command!";
-            send(player, errorMessage);
+            send(player, "&cYou do not have permission to use this command!");
             return false;
         }
     }

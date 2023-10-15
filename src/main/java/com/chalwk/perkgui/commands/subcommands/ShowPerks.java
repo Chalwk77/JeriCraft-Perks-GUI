@@ -118,10 +118,16 @@ public class ShowPerks extends SubCommand {
 
     private void showPerks(Player sender, Map<?, ?> data, String title, String category) {
         //CustomGUI menu = new CustomGUI(formatMSG(title), 53);
-        System.out.println("SHOWING PERKS FOR " + category);
-        List<String> perks = (List<String>) data.get("perks");
 
-
+        Map<?, ?> perks = (Map<?, ?>) data.get("perks");
+        for (Map.Entry<?, ?> entry : perks.entrySet()) {
+            String node = (String) entry.getKey();
+            if (sender.hasPermission(node)) {
+                Map<?, ?> perkData = (Map<?, ?>) entry.getValue();
+                String name = (String) perkData.get("name");
+                List<String> lore = (List<String>) perkData.get("lore");
+            }
+        }
     }
 
     private void showCloseButton(Player sender, CustomGUI gui, int slot) {

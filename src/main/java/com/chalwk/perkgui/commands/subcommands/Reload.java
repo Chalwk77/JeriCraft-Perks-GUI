@@ -3,8 +3,9 @@ package com.chalwk.perkgui.commands.subcommands;
 
 import com.chalwk.perkgui.Main;
 import com.chalwk.perkgui.commands.SubCommand;
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
+
+import static com.chalwk.perkgui.Main.send;
 
 public class Reload extends SubCommand {
     @Override
@@ -31,11 +32,13 @@ public class Reload extends SubCommand {
     public void perform(Player sender, String[] args) {
         if (args.length == 1) {
             Main.ReloadConfig();
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8============================="));
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&3JeriCraftPerks reloaded!"));
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8============================="));
+            send(sender, "&8=============================");
+            send(sender, "&3JeriCraftPerks reloaded!");
+            send(sender, "&8=============================");
         } else {
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', getSyntax()));
+            send(sender, "&8=============================");
+            send(sender, getSyntax());
+            send(sender, "&8=============================");
         }
     }
 }
