@@ -13,7 +13,13 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+
+import static com.chalwk.perkgui.Main.playerSpend;
+import static com.chalwk.perkgui.Main.send;
 
 public class ShowPerks extends SubCommand {
 
@@ -39,8 +45,6 @@ public class ShowPerks extends SubCommand {
         return "perks.show";
     }
 
-    Map<UUID, Integer> playerData = new HashMap<>();
-
     /**
      * @param sender Player
      * @param args   String[]
@@ -48,18 +52,10 @@ public class ShowPerks extends SubCommand {
     @Override
     public void perform(Player sender, String[] args) {
 
+        playerSpend.put(sender.getUniqueId(), 0);
+
         CustomGUI menu = new CustomGUI(formatMSG(config.getString("MAIN-MENU-TITLE")), 3);
         showCloseButton(sender, menu, 26);
-
-        playerData.put(sender.getUniqueId(), 0);
-
-        ItemStack profileButton = createItem("PLAYER_HEAD", config.getString("GUI_PROFILE_BUTTON"), new ArrayList<>());
-        GUIButton profile = new GUIButton(profileButton);
-        menu.setItem(profile, 13);
-        profile.setAction(() -> {
-            int totalSpent = playerData.get(sender.getUniqueId());
-            sender.sendMessage("You have spent a total of $" + totalSpent + ".");
-        });
 
         int slot = 0;
         for (Map<?, ?> opt : config.getMapList("CATEGORIES")) {
@@ -88,17 +84,34 @@ public class ShowPerks extends SubCommand {
             button.setAction(() -> {
                 menu.close(sender);
                 showPerks(sender, data, title);
+                sender.playSound(sender.getLocation(), "entity.villager.yes", 1, 1);
             });
 
             slot = slot + 2;
+            updateTotalSpent(sender, data);
         }
+        showProfileButton(sender, menu);
         menu.show(sender);
+    }
+
+    private void showProfileButton(Player sender, CustomGUI menu) {
+        List<String> profileLore = new ArrayList<>();
+        profileLore.add(formatMSG("&aClick to view your profile."));
+        profileLore.add(formatMSG("&aYou have spent a total of &b$" + playerSpend.get(sender.getUniqueId()) + "&a."));
+        profileLore.add(" ");
+        profileLore.add(formatMSG("&cProfile options coming soon!"));
+        ItemStack profileButton = createItem("PLAYER_HEAD", config.getString("GUI_PROFILE_BUTTON"), profileLore);
+        GUIButton profile = new GUIButton(profileButton);
+        menu.setItem(profile, 13);
+        profile.setAction(() -> {
+            sender.playSound(sender.getLocation(), "block.note_block.pling", 1, 1);
+        });
     }
 
     /**
      * @param sender Player
-     * @param data Map<?, ?>
-     * @param title String
+     * @param data   Map<?, ?>
+     * @param title  String
      */
     private void showPerks(Player sender, Map<?, ?> data, String title) {
 
@@ -110,15 +123,9 @@ public class ShowPerks extends SubCommand {
             String node = (String) entry.getKey();
             if (sender.hasPermission(node)) {
                 slot++;
-
                 Map<?, ?> perkData = (Map<?, ?>) entry.getValue();
                 String name = (String) perkData.get("name");
                 String icon = (String) perkData.get("icon");
-
-                int price = (int) perkData.get("price");
-                int totalSpent = playerData.get(sender.getUniqueId());
-                playerData.put(sender.getUniqueId(), totalSpent + price);
-
                 List<String> lore = (List<String>) perkData.get("lore");
                 showPerkButtons(sender, name, icon, lore, menu, slot);
             }
@@ -127,18 +134,32 @@ public class ShowPerks extends SubCommand {
         if (slot >= 0) {
             menu.show(sender);
         } else {
-            sender.sendMessage(formatMSG(config.getString("NO_PERKS").replace("{category}", title)));
+            send(sender, config.getString("NO_PERKS").replace("{category}", title));
+            sender.playSound(sender.getLocation(), "entity.villager.no", 1, 1);
             perform(sender, new String[]{}); // go back to main menu
+        }
+    }
+
+    private void updateTotalSpent(Player sender, Map<?, ?> data) {
+        Map<?, ?> perks = (Map<?, ?>) data.get("perks");
+        for (Map.Entry<?, ?> entry : perks.entrySet()) {
+            String node = (String) entry.getKey();
+            if (sender.hasPermission(node)) {
+                Map<?, ?> perkData = (Map<?, ?>) entry.getValue();
+                int price = (int) perkData.get("price");
+                int totalSpent = playerSpend.get(sender.getUniqueId());
+                playerSpend.put(sender.getUniqueId(), totalSpent + price);
+            }
         }
     }
 
     /**
      * @param sender Player
-     * @param name String (title)
-     * @param icon String (Material)
-     * @param lore List<String>
-     * @param gui CustomGUI
-     * @param slot int
+     * @param name   String (title)
+     * @param icon   String (Material)
+     * @param lore   List<String>
+     * @param gui    CustomGUI
+     * @param slot   int
      */
     private void showPerkButtons(Player sender, String name, String icon, List<String> lore, CustomGUI gui, int slot) {
 
@@ -184,8 +205,8 @@ public class ShowPerks extends SubCommand {
 
     /**
      * @param sender Player
-     * @param gui CustomGUI
-     * @param slot int
+     * @param gui    CustomGUI
+     * @param slot   int
      */
     private void showCloseButton(Player sender, CustomGUI gui, int slot) {
         ItemStack close = createItem("BARRIER", config.getString("GUI_CLOSE_BUTTON"), new ArrayList<>());

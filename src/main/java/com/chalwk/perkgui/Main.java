@@ -11,8 +11,13 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
 public final class Main extends JavaPlugin {
 
+    public static Map<UUID, Integer> playerSpend = new HashMap<>();
     public static Main instance;
     private static FileConfiguration config;
 
