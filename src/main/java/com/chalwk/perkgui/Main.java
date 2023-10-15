@@ -19,10 +19,14 @@ public final class Main extends JavaPlugin {
 
     public static Map<UUID, Integer> playerSpend = new HashMap<>();
     public static Main instance;
-    private static FileConfiguration config;
+    public static FileConfiguration config;
 
     public static void send(Player sender, String msg) {
         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', msg));
+    }
+
+    public static String formatMSG(String message) {
+        return ChatColor.translateAlternateColorCodes('&', message);
     }
 
     public static void ReloadConfig() {

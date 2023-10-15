@@ -3,14 +3,11 @@
 # Copyright, 2023, Jericho Crosby <jericho.crosby227@gmail.com>
 ###############################################################
 
-MAIN-MENU-TITLE: "&b&lJeriCraft Perks"
-GUI_TITLE: "&b&lYOUR PERKS:"
+MAIN-MENU-TITLE: "&b&lAvailable Perks"
+PROFILE-MENU-TITLE: "&b&lYOUR PERKS"
 GUI_CLOSE_BUTTON: "&cClose!"
 GUI_PREVIOUS_PAGE: "&bPrevious Page"
-GUI_NEXT_PAGE: "&bNext Page"
-
 NO_PERKS: "&cYou don't have any perks in the &b&l{category} &ccategory!"
-
 GUI_PROFILE_BUTTON: "&b&lYour Profile"
 
 CATEGORIES:
