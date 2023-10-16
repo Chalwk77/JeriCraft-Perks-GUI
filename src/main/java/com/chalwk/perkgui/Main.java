@@ -17,12 +17,15 @@ import java.util.UUID;
 
 public final class Main extends JavaPlugin {
 
-    public static Map<UUID, Integer> playerSpend = new HashMap<>();
     public static Main instance;
     public static FileConfiguration config;
 
     public static void send(Player sender, String msg) {
         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', msg));
+    }
+
+    public static void sound(Player player, String sound) {
+        player.playSound(player.getLocation(), sound, 1,1);
     }
 
     public static String formatMSG(String message) {
