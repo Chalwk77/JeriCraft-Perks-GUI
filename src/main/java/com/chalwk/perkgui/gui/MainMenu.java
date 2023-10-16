@@ -24,7 +24,7 @@ public class MainMenu {
         menu.showCloseButton(player, slots, false); // slots = (rows * 9) - 1
         menu.fillEmptySlots(slots); // slots = (rows * 9) - 1
         if (!mainMenu) {
-            showBackButton(player, menu, false);
+            showBackButton(player, menu, 18, false);
         }
 
         List<Map<?, ?>> categories = config.getMapList("CATEGORIES");
@@ -68,20 +68,20 @@ public class MainMenu {
             }
         }
 
-        showBackButton(sender, menu, mainMenu);
+        showBackButton(sender, menu, 45, mainMenu);
         menu.showCloseButton(sender, 53, false);
         menu.fillEmptySlots(53);
         menu.show(sender);
     }
 
-    private static void showBackButton(Player player, CustomGUI menu, boolean mainMenu) {
+    private static void showBackButton(Player player, CustomGUI menu, int slot, boolean mainMenu) {
 
         String backIcon = config.getString("GUI_BACK_BUTTON");
         String backIconText = config.getString("GUI_BACK_BUTTON_TEXT");
         ItemStack item = menu.createItem(backIcon, backIconText, new ArrayList<>(), false);
 
         GUIButton button = new GUIButton(item);
-        menu.setItem(button, 45);
+        menu.setItem(button, slot);
         button.setAction(() -> {
             menu.close(player);
             showMenu(player, config.getString("MAIN-MENU-TITLE"), 3, mainMenu);
