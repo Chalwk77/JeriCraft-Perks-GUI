@@ -23,6 +23,9 @@ public class MainMenu {
         CustomGUI menu = new CustomGUI(formatMSG(title), rows);
         menu.showCloseButton(player, slots, false); // slots = (rows * 9) - 1
         menu.fillEmptySlots(slots); // slots = (rows * 9) - 1
+        if (!mainMenu) {
+            showBackButton(player, menu, false);
+        }
 
         List<Map<?, ?>> categories = config.getMapList("CATEGORIES");
         for (Map<?, ?> opt : categories) {

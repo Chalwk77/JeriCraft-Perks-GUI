@@ -74,7 +74,6 @@ public class CustomGUI {
     }
 
     public void showProfileButton(Player sender, int slot, boolean show) {
-
         if (!show) {
             return;
         }
