@@ -1,13 +1,15 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
 package com.chalwk.perkgui.commands.subcommands;
 
-import com.chalwk.perkgui.Main;
 import com.chalwk.perkgui.commands.SubCommand;
+import com.chalwk.perkgui.data.Config;
 import org.bukkit.entity.Player;
 
-import static com.chalwk.perkgui.Main.send;
+import static com.chalwk.perkgui.Misc.send;
 
 public class Reload extends SubCommand {
+
+
     @Override
     public String getName() {
         return "reload";
@@ -31,7 +33,7 @@ public class Reload extends SubCommand {
     @Override
     public void perform(Player sender, String[] args) {
         if (args.length == 1) {
-            Main.ReloadConfig();
+            Config.reload();
             send(sender, "&8=============================");
             send(sender, "&3JeriCraftPerks reloaded!");
             send(sender, "&8=============================");

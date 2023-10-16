@@ -2,9 +2,12 @@
 package com.chalwk.perkgui.gui;
 
 import com.chalwk.perkgui.Main;
+import com.chalwk.perkgui.Misc;
+import com.chalwk.perkgui.data.Config;
 import com.chalwk.perkgui.data.PlayerDataManager;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -17,11 +20,11 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-import static com.chalwk.perkgui.Main.*;
 import static com.chalwk.perkgui.gui.MainMenu.showMenu;
 
 public class CustomGUI {
 
+    private static final FileConfiguration config = Config.get();
     private final List<GUIButton> buttons = new ArrayList<>();
     private Inventory inventory;
 
@@ -80,8 +83,8 @@ public class CustomGUI {
 
         int moneySpent = PlayerDataManager.getData(sender).getMoneySpent();
         List<String> profileLore = new ArrayList<>();
-        profileLore.add(formatMSG("&aClick to view your profile."));
-        profileLore.add(formatMSG("&aYou have spent a total of &b$" + moneySpent + "&a."));
+        profileLore.add(Misc.formatMSG("&aClick to view your profile."));
+        profileLore.add(Misc.formatMSG("&aYou have spent a total of &b$" + moneySpent + "&a."));
 
         ItemStack item = this.createItem("PLAYER_HEAD", config.getString("GUI_PROFILE_BUTTON"), profileLore, true);
         GUIButton button = new GUIButton(item);
@@ -89,7 +92,7 @@ public class CustomGUI {
 
         button.setAction(() -> {
             this.close(sender);
-            sound(sender, "block.note_block.pling");
+            Misc.sound(sender, "block.note_block.pling");
             showMenu(sender, config.getString("PROFILE-MENU-TITLE"), 3, false);
         });
     }
@@ -99,8 +102,8 @@ public class CustomGUI {
         ItemStack item = new ItemStack(Material.valueOf(icon));
         ItemMeta meta = item.getItemMeta();
 
-        meta.setDisplayName(formatMSG(name));
-        lore.replaceAll(Main::formatMSG);
+        meta.setDisplayName(Misc.formatMSG(name));
+        lore.replaceAll(Misc::formatMSG);
         meta.setLore(lore);
 
         if (Enchant) {

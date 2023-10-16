@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-import static com.chalwk.perkgui.Main.send;
+import static com.chalwk.perkgui.Misc.send;
 import static org.reflections.Reflections.log;
 
 public class CommandManager implements CommandExecutor, TabCompleter {

@@ -2,14 +2,14 @@
 package com.chalwk.perkgui.commands.subcommands;
 
 import com.chalwk.perkgui.commands.SubCommand;
+import com.chalwk.perkgui.data.Config;
 import com.chalwk.perkgui.data.PlayerDataManager;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
-
-import static com.chalwk.perkgui.Main.config;
 import static com.chalwk.perkgui.gui.MainMenu.showMenu;
 
 public class ShowPerks extends SubCommand {
-
+    private static final FileConfiguration config = Config.get();
     @Override
     public String getName() {
         return "show";

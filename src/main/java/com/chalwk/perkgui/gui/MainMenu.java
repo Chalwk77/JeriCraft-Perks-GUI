@@ -1,7 +1,10 @@
 /* Copyright (c) 2023, JeriCraft-Perks-GUI. Jericho Crosby <jericho.crosby227@gmail.com> */
 package com.chalwk.perkgui.gui;
 
+import com.chalwk.perkgui.Misc;
+import com.chalwk.perkgui.data.Config;
 import com.chalwk.perkgui.data.PlayerDataManager;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
@@ -9,18 +12,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static com.chalwk.perkgui.Main.*;
 import static com.chalwk.perkgui.gui.CustomGUI.RenderCategories;
 import static com.chalwk.perkgui.gui.CustomGUI.renderPerkButton;
 
 public class MainMenu {
+
+    private static final FileConfiguration config = Config.get();
 
     public static void showMenu(Player player, String title, int rows, boolean mainMenu) {
 
         int slot = 0;
         int slots = (rows * 9) - 1;
 
-        CustomGUI menu = new CustomGUI(formatMSG(title), rows);
+        CustomGUI menu = new CustomGUI(Misc.formatMSG(title), rows);
         menu.showCloseButton(player, slots, false); // slots = (rows * 9) - 1
         menu.fillEmptySlots(slots); // slots = (rows * 9) - 1
         if (!mainMenu) {
@@ -35,7 +39,7 @@ public class MainMenu {
             CustomGUI.Categories result = RenderCategories(opt, menu, slot);
             result.button.setAction(() -> {
                 menu.close(player);
-                sound(player, "entity.villager.yes");
+                Misc.sound(player, "entity.villager.yes");
                 showPerks(player, result.data, result.title, mainMenu);
             });
             slot = slot + 2;
@@ -48,7 +52,7 @@ public class MainMenu {
     private static void showPerks(Player sender, Map<?, ?> data, String title, boolean mainMenu) {
 
         int slot = -1;
-        CustomGUI menu = new CustomGUI(formatMSG(title), 6);
+        CustomGUI menu = new CustomGUI(Misc.formatMSG(title), 6);
         Map<?, ?> perks = (Map<?, ?>) data.get("perks");
 
         for (Map.Entry<?, ?> entry : perks.entrySet()) {

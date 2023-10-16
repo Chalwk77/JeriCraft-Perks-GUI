@@ -2,16 +2,10 @@
 package com.chalwk.perkgui.data;
 
 import com.chalwk.perkgui.gui.CustomGUI;
-import com.chalwk.perkgui.gui.GUIButton;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
-import static com.chalwk.perkgui.Main.config;
-import static com.chalwk.perkgui.Main.formatMSG;
 
 public class PlayerData {
 

@@ -3,54 +3,26 @@
 package com.chalwk.perkgui;
 
 import com.chalwk.perkgui.commands.CommandManager;
+import com.chalwk.perkgui.data.Config;
 import com.chalwk.perkgui.listener.GUIListener;
 import com.chalwk.perkgui.listener.JoinListener;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
-
 public final class Main extends JavaPlugin {
 
     public static Main instance;
-    public static FileConfiguration config;
-
-    public static void send(Player sender, String msg) {
-        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', msg));
-    }
-
-    public static void sound(Player player, String sound) {
-        player.playSound(player.getLocation(), sound, 1,1);
-    }
-
-    public static String formatMSG(String message) {
-        return ChatColor.translateAlternateColorCodes('&', message);
-    }
-
-    public static void ReloadConfig() {
-        instance.reloadConfig();
-    }
 
     public static Main getInstance() {
         return instance;
-    }
-
-    public static FileConfiguration getPluginConfig() {
-        return config;
     }
 
     @Override
     public void onEnable() {
 
         instance = this;
-        config = this.getConfig();
-        config.options().copyDefaults(true);
-        saveConfig();
+        Config.setup();
+        Config.get().options().copyDefaults(true);
+        Config.save();
         registerListeners();
 
         String pluginVersion = getDescription().getVersion();
