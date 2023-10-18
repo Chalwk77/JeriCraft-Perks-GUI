@@ -76,6 +76,7 @@ public class CustomGUI {
     }
 
     public void showProfileButton(Player player, int slot, boolean mainMenu) {
+
         if (!mainMenu) {
             return;
         }
@@ -85,8 +86,9 @@ public class CustomGUI {
         profileLore.add(Misc.formatMSG("&aClick to view your profile."));
         profileLore.add(Misc.formatMSG("&aYou have spent a total of &b$" + moneySpent + "&a."));
 
-        ItemStack item = this.createItem("PLAYER_HEAD", config.getString("GUI_PROFILE_BUTTON"), profileLore, true);
-        GUIButton button = new GUIButton(item);
+        PlayerDataManager.getData(player).setHead(profileLore, config.getString("GUI_PROFILE_BUTTON"));
+        ItemStack head = PlayerDataManager.getData(player).getHead();
+        GUIButton button = new GUIButton(head);
         this.setItem(button, slot);
 
         button.setAction(() -> {
