@@ -2,13 +2,11 @@
 package com.chalwk.perkgui.commands.subcommands;
 
 import com.chalwk.perkgui.commands.SubCommand;
-import com.chalwk.perkgui.data.Config;
 import org.bukkit.entity.Player;
-
 import static com.chalwk.perkgui.Misc.send;
+import static com.chalwk.perkgui.Main.getInstance;
 
 public class Reload extends SubCommand {
-
 
     @Override
     public String getName() {
@@ -33,7 +31,7 @@ public class Reload extends SubCommand {
     @Override
     public void perform(Player sender, String[] args) {
         if (args.length == 1) {
-            Config.reload();
+            getInstance().reloadConfig();
             send(sender, "&8=============================");
             send(sender, "&3JeriCraftPerks reloaded!");
             send(sender, "&8=============================");

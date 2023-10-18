@@ -2,14 +2,16 @@
 package com.chalwk.perkgui.commands.subcommands;
 
 import com.chalwk.perkgui.commands.SubCommand;
-import com.chalwk.perkgui.data.Config;
 import com.chalwk.perkgui.data.PlayerDataManager;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+
+import static com.chalwk.perkgui.Main.getPluginConfig;
 import static com.chalwk.perkgui.gui.MainMenu.showMenu;
 
 public class ShowPerks extends SubCommand {
-    private static final FileConfiguration config = Config.get();
+
+    private static final FileConfiguration config = getPluginConfig();
     @Override
     public String getName() {
         return "show";
@@ -32,7 +34,6 @@ public class ShowPerks extends SubCommand {
 
     @Override
     public void perform(Player sender, String[] args) {
-        PlayerDataManager.getData(sender).setMoneySpent(0);
         showMenu(sender, config.getString("MAIN-MENU-TITLE"), 3, true);
     }
 }

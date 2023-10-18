@@ -2,7 +2,6 @@
 package com.chalwk.perkgui.gui;
 
 import com.chalwk.perkgui.Misc;
-import com.chalwk.perkgui.data.Config;
 import com.chalwk.perkgui.data.PlayerDataManager;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -12,14 +11,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import static com.chalwk.perkgui.Main.getPluginConfig;
 import static com.chalwk.perkgui.gui.CustomGUI.RenderCategories;
 import static com.chalwk.perkgui.gui.CustomGUI.renderPerkButton;
 
 public class MainMenu {
 
-    private static final FileConfiguration config = Config.get();
+    private static final FileConfiguration config = getPluginConfig();
 
     public static void showMenu(Player player, String title, int rows, boolean mainMenu) {
+
+        PlayerDataManager.getData(player).setMoneySpent(0);
 
         int slot = 0;
         int slots = (rows * 9) - 1;
@@ -28,7 +30,7 @@ public class MainMenu {
         menu.showCloseButton(player, slots, false); // slots = (rows * 9) - 1
         menu.fillEmptySlots(slots); // slots = (rows * 9) - 1
         if (!mainMenu) {
-            showBackButton(player, menu, 18, false);
+            showBackButton(player, menu, 18, true);
         }
 
         List<Map<?, ?>> categories = config.getMapList("CATEGORIES");
@@ -63,10 +65,7 @@ public class MainMenu {
             String icon = (String) perk.get("icon");
             List<String> lore = (List<String>) perk.get("lore");
 
-            if (mainMenu) {
-                slot++;
-                renderPerkButton(name, icon, lore, menu, slot);
-            } else if (sender.hasPermission(permission)) {
+            if (mainMenu || sender.hasPermission(permission)) {
                 slot++;
                 renderPerkButton(name, icon, lore, menu, slot);
             }
@@ -88,7 +87,11 @@ public class MainMenu {
         menu.setItem(button, slot);
         button.setAction(() -> {
             menu.close(player);
-            showMenu(player, config.getString("MAIN-MENU-TITLE"), 3, mainMenu);
+            if (mainMenu) {
+                showMenu(player, config.getString("MAIN-MENU-TITLE"), 3, true);
+            } else {
+                showMenu(player, config.getString("PROFILE-MENU-TITLE"), 3, false);
+            }
         });
     }
 }

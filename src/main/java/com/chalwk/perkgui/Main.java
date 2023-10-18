@@ -3,14 +3,21 @@
 package com.chalwk.perkgui;
 
 import com.chalwk.perkgui.commands.CommandManager;
-import com.chalwk.perkgui.data.Config;
 import com.chalwk.perkgui.listener.GUIListener;
 import com.chalwk.perkgui.listener.JoinListener;
 import org.bukkit.Bukkit;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.io.File;
+
 public final class Main extends JavaPlugin {
 
-    public static Main instance;
+    static Main instance;
+    public static FileConfiguration config;
+    public static FileConfiguration getPluginConfig() {
+        return config;
+    }
 
     public static Main getInstance() {
         return instance;
@@ -19,15 +26,24 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
 
+        super.onEnable();
         instance = this;
-        Config.setup();
-        Config.get().options().copyDefaults(true);
-        Config.save();
+
+        reloadConfig();
         registerListeners();
 
         String pluginVersion = getDescription().getVersion();
         getLogger().info("JeriCraftPerks [" + pluginVersion + "] has been loaded!");
         getCommand("perks").setExecutor(new CommandManager());
+    }
+
+    @Override
+    public void reloadConfig() {
+        super.reloadConfig();
+        saveDefaultConfig();
+        config = getConfig();
+        config.options().copyDefaults(true);
+        saveConfig();
     }
 
     private void registerListeners() {

@@ -3,7 +3,6 @@ package com.chalwk.perkgui.gui;
 
 import com.chalwk.perkgui.Main;
 import com.chalwk.perkgui.Misc;
-import com.chalwk.perkgui.data.Config;
 import com.chalwk.perkgui.data.PlayerDataManager;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -20,11 +19,12 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
+import static com.chalwk.perkgui.Main.getPluginConfig;
 import static com.chalwk.perkgui.gui.MainMenu.showMenu;
 
 public class CustomGUI {
 
-    private static final FileConfiguration config = Config.get();
+    private static final FileConfiguration config = getPluginConfig();
     private final List<GUIButton> buttons = new ArrayList<>();
     private Inventory inventory;
 
@@ -76,8 +76,8 @@ public class CustomGUI {
         button.setAction(sender::closeInventory);
     }
 
-    public void showProfileButton(Player sender, int slot, boolean show) {
-        if (!show) {
+    public void showProfileButton(Player sender, int slot, boolean mainMenu) {
+        if (!mainMenu) {
             return;
         }
 
@@ -142,7 +142,6 @@ public class CustomGUI {
     public static class Categories {
         public final Map<?, ?> data;
         public final GUIButton button;
-
         public String title;
 
         public Categories(Map<?, ?> data, GUIButton button) {
