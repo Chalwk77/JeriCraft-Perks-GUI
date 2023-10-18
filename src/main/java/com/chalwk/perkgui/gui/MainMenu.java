@@ -47,7 +47,7 @@ public class MainMenu {
             slot = slot + 2;
             PlayerDataManager.getData(player).updateMoneySpent(player, result.data);
         }
-        menu.showProfileButton(player, 13, mainMenu);
+        menu.showProfileButton(player, 22, mainMenu);
         menu.show(player);
     }
 
