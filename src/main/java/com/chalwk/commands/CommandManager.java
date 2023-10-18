@@ -1,5 +1,5 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
-package com.chalwk.perkgui.commands;
+package com.chalwk.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-import static com.chalwk.perkgui.Misc.send;
+import static com.chalwk.Misc.send;
 import static org.reflections.Reflections.log;
 
 public class CommandManager implements CommandExecutor, TabCompleter {
@@ -23,7 +23,7 @@ public class CommandManager implements CommandExecutor, TabCompleter {
     private final ArrayList<SubCommand> subcommands = new ArrayList<>();
 
     public CommandManager() {
-        Reflections reflections = new Reflections("com.chalwk.perkgui.commands.subcommands");
+        Reflections reflections = new Reflections("com.chalwk.commands.subcommands");
         for (Class<?> commandClass : reflections.getSubTypesOf(SubCommand.class)) {
             try {
                 subcommands.add((SubCommand) commandClass.getDeclaredConstructor().newInstance());

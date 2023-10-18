@@ -1,13 +1,12 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
-package com.chalwk.perkgui.commands.subcommands;
+package com.chalwk.commands.subcommands;
 
-import com.chalwk.perkgui.commands.SubCommand;
-import com.chalwk.perkgui.data.PlayerDataManager;
+import com.chalwk.commands.SubCommand;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
-import static com.chalwk.perkgui.Main.getPluginConfig;
-import static com.chalwk.perkgui.gui.MainMenu.showMenu;
+import static com.chalwk.JeriCraftPerkGUI.getPluginConfig;
+import static com.chalwk.gui.Menu.showMenu;
 
 public class ShowPerks extends SubCommand {
 

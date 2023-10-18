@@ -1,8 +1,8 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
-package com.chalwk.perkgui.listener;
+package com.chalwk.listener;
 
-import com.chalwk.perkgui.data.PlayerData;
-import com.chalwk.perkgui.data.PlayerDataManager;
+import com.chalwk.data.PlayerData;
+import com.chalwk.data.PlayerDataManager;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

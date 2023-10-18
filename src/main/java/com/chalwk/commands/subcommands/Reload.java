@@ -1,10 +1,10 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
-package com.chalwk.perkgui.commands.subcommands;
+package com.chalwk.commands.subcommands;
 
-import com.chalwk.perkgui.commands.SubCommand;
+import com.chalwk.commands.SubCommand;
 import org.bukkit.entity.Player;
-import static com.chalwk.perkgui.Misc.send;
-import static com.chalwk.perkgui.Main.getInstance;
+import static com.chalwk.Misc.send;
+import static com.chalwk.JeriCraftPerkGUI.getInstance;
 
 public class Reload extends SubCommand {
 

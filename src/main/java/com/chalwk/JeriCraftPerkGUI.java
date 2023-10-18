@@ -1,25 +1,23 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
 
-package com.chalwk.perkgui;
+package com.chalwk;
 
-import com.chalwk.perkgui.commands.CommandManager;
-import com.chalwk.perkgui.listener.GUIListener;
-import com.chalwk.perkgui.listener.JoinListener;
+import com.chalwk.commands.CommandManager;
+import com.chalwk.listener.GUIListener;
+import com.chalwk.listener.JoinListener;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.File;
+public final class JeriCraftPerkGUI extends JavaPlugin {
 
-public final class Main extends JavaPlugin {
-
-    static Main instance;
+    static JeriCraftPerkGUI instance;
     public static FileConfiguration config;
     public static FileConfiguration getPluginConfig() {
         return config;
     }
 
-    public static Main getInstance() {
+    public static JeriCraftPerkGUI getInstance() {
         return instance;
     }
 

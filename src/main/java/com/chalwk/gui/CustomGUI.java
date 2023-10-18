@@ -1,9 +1,9 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
-package com.chalwk.perkgui.gui;
+package com.chalwk.gui;
 
-import com.chalwk.perkgui.Main;
-import com.chalwk.perkgui.Misc;
-import com.chalwk.perkgui.data.PlayerDataManager;
+import com.chalwk.JeriCraftPerkGUI;
+import com.chalwk.Misc;
+import com.chalwk.data.PlayerDataManager;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -19,18 +19,17 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-import static com.chalwk.perkgui.Main.getPluginConfig;
-import static com.chalwk.perkgui.gui.MainMenu.showMenu;
+import static com.chalwk.gui.Menu.showMenu;
 
 public class CustomGUI {
 
-    private static final FileConfiguration config = getPluginConfig();
+    private static final FileConfiguration config = JeriCraftPerkGUI.getPluginConfig();
     private final List<GUIButton> buttons = new ArrayList<>();
     private Inventory inventory;
 
     public CustomGUI(String title, int rows) {
         if (rows > 6) {
-            Main.getInstance().getLogger().warning("Too many rows!");
+            JeriCraftPerkGUI.getInstance().getLogger().warning("Too many rows!");
             return;
         }
         this.inventory = Bukkit.createInventory(null, rows * 9, title);
@@ -67,21 +66,21 @@ public class CustomGUI {
         });
     }
 
-    public void showCloseButton(Player sender, int slot, boolean Enchant) {
+    public void showCloseButton(Player player, int slot, boolean Enchant) {
         String closeIcon = config.getString("GUI_CLOSE_BUTTON");
         String closeIconText = config.getString("GUI_CLOSE_BUTTON_TEXT");
         ItemStack item = this.createItem(closeIcon, closeIconText, new ArrayList<>(), Enchant);
         GUIButton button = new GUIButton(item);
         this.setItem(button, slot);
-        button.setAction(sender::closeInventory);
+        button.setAction(player::closeInventory);
     }
 
-    public void showProfileButton(Player sender, int slot, boolean mainMenu) {
+    public void showProfileButton(Player player, int slot, boolean mainMenu) {
         if (!mainMenu) {
             return;
         }
 
-        int moneySpent = PlayerDataManager.getData(sender).getMoneySpent();
+        int moneySpent = PlayerDataManager.getData(player).getMoneySpent();
         List<String> profileLore = new ArrayList<>();
         profileLore.add(Misc.formatMSG("&aClick to view your profile."));
         profileLore.add(Misc.formatMSG("&aYou have spent a total of &b$" + moneySpent + "&a."));
@@ -91,9 +90,9 @@ public class CustomGUI {
         this.setItem(button, slot);
 
         button.setAction(() -> {
-            this.close(sender);
-            Misc.sound(sender, "block.note_block.pling");
-            showMenu(sender, config.getString("PROFILE-MENU-TITLE"), 3, false);
+            this.close(player);
+            Misc.sound(player, "block.note_block.pling");
+            showMenu(player, config.getString("PROFILE-MENU-TITLE"), 3, false);
         });
     }
 

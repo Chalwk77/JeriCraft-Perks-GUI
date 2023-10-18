@@ -1,5 +1,5 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
-package com.chalwk.perkgui.commands;
+package com.chalwk.commands;
 
 import org.bukkit.entity.Player;
 

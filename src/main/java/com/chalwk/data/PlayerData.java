@@ -1,8 +1,7 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
-package com.chalwk.perkgui.data;
+package com.chalwk.data;
 
-import com.chalwk.perkgui.gui.CustomGUI;
-import org.bukkit.configuration.file.FileConfiguration;
+import com.chalwk.gui.CustomGUI;
 import org.bukkit.entity.Player;
 import java.util.Map;
 
