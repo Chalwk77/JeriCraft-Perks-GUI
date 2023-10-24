@@ -44,15 +44,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- Copy the jar to the server plugins folder -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.3.1</version>
-                <configuration>
-                    <outputDirectory>C:\Multicraft\data\servers\DevServer\plugins</outputDirectory>
-                </configuration>
-            </plugin>
         </plugins>
         <resources>
             <resource>
